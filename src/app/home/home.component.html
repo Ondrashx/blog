@@ -1,0 +1,24 @@
+
+  <main>
+    <article *ngFor="let page of links$ | async">
+      <!-- {{ page.route }} {{ page.arbitraryValue }} -->
+  
+      <mat-card >
+        <mat-card-header class="clickable" [routerLink]="page.route">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title >{{ page.title }}</mat-card-title>
+          <mat-card-subtitle>{{ page.description }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+  
+      <!-- <span *ngFor="let arrayItem of page.arbitraryArray">
+        {{ arrayItem }}
+      </span> -->
+    </article>
+  </main>
+  
+  

@@ -1,0 +1,86 @@
+header {
+    width:100%;
+    border-bottom: solid 1px #e1e1e1;
+    min-height: 400px;
+    //background-image: url(../assets/home-bg.jpg);
+    background-size: cover;
+    position:relative;
+    box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 43%);
+    
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #212529;
+        opacity: .5;
+    }
+
+
+
+    .header-content {
+        color: white;
+        padding-top: 20px;
+        max-width: 1024px;
+        z-index: 2;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        position:relative;
+
+        .top-row {
+
+            display: flex;
+            justify-content: space-between;
+
+            .left-title {
+                font-weight: bold;
+                font-size: 30px;
+                cursor: pointer;
+                outline: none !important;
+
+                &:hover {
+                    color: lightgray;
+                }
+            }
+    
+            .header-items {
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;                
+                line-height: 30px;                
+
+                .header-item {
+                    margin-left: 2em;
+                    cursor: pointer;
+                    color: white;                    
+                    
+                    &:hover {
+                        color: lightgray;
+                        border-top: 2px solid;
+                    }
+                }
+            }
+        }
+
+        .main-title {
+            color: white;
+            position: relative;
+            padding: 200px 0;
+            min-width: 90%;
+            text-align: center;
+            
+
+            h1 {
+                font-size: 80px;
+                font-weight: 800;
+                cursor: default;                
+            }
+        }
+
+
+
+    }
+}

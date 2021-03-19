@@ -1,0 +1,27 @@
+main {
+    margin: auto;
+    max-width: 1024px;
+    padding: 30px;
+
+    article {
+        margin-bottom: 30px;
+
+        .clickable {
+            cursor: pointer;
+            outline: none !important;
+
+            &:hover {
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .example-header-image {
+        width: 100px;
+        height: 100px;
+    
+        background-image: url('../../assets/money-stack.jpg');
+        background-size: cover;
+    }
+}
+
