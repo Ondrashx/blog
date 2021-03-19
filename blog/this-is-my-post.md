@@ -3,7 +3,7 @@ title: 'Děláme pořádek'
 description: 'Jak lépe sledovat své cash flow. Využití moderních nástrojů Vašeho internetového bankovnictví pro sledování příjmů a výdajů. Ujasnění kolik peněz vlastně máme a kde.'
 published: true
 isBlog: true
-img: '../assets/money-stack.jpg'
+img: '../assets/money-stack-l.jpg'
 slugs:
     - ___UNPUBLISHED___kmfg1qq8_juziLi8bRwJIWNxabGeSrt8uo2Czff4D
     - delame-poradek
@@ -28,7 +28,7 @@ You will like those projects! XX
 ##### h5 Heading
 ###### h6 Heading
 
-
+<!-- 
 ## Horizontal Rules
 
 ___
@@ -253,4 +253,4 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 ::: warning
 *here be dragons*
-:::
+::: -->
