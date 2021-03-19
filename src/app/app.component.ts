@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { SocialTagsService } from './services/social-tags.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,9 @@ export class AppComponent {
 
   currentPage$: Observable<ScullyRoute> = this.scully.getCurrent(); //available$;
 
-  constructor(private scully: ScullyRoutesService) {}
+  constructor(private scully: ScullyRoutesService, private socialTagsService: SocialTagsService) {
+    this.socialTagsService.setTitleAndTags();
+  }
 
   ngOnInit() {
     // debug current pages
