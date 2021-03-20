@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog3": {
+    "osobni-finance": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog3",
+            "outputPath": "dist/osobni-finance",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "blog3:build"
+            "browserTarget": "osobni-finance:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "blog3:build:production"
+              "browserTarget": "osobni-finance:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blog3:build"
+            "browserTarget": "osobni-finance:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "blog3:serve"
+            "devServerTarget": "osobni-finance:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "blog3:serve:production"
+              "devServerTarget": "osobni-finance:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "blog3"
+  "defaultProject": "osobni-finance"
 }

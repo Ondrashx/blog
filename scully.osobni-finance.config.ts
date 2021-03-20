@@ -1,8 +1,8 @@
 import { ScullyConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
   projectRoot: "./src",
-  projectName: "blog3",
-  outDir: './dist/static',
+  projectName: "osobni-finance",
+  outDir: './static-ready',
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',

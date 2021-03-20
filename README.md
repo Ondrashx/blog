@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/976a5561-3e7d-41e1-ba33-6b6632bc5332/deploy-status)](https://app.netlify.com/sites/osobni-finance/deploys)
 
 
-# Blog3
+# osobni-finance
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
