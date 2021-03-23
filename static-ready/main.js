@@ -72,11 +72,48 @@ class AppComponent {
         // debug current pages
         this.currentPage$.subscribe((links) => {
             console.log(links);
+            // subscribe to changed url and recreate whole iframe
+            this.create_remarkbox_iframe();
+            var thread_fragment = window.location.hash;
+            window.iFrameResize({
+                checkOrigin: ["https://my.remarkbox.com"],
+                inPageLinks: true,
+                initCallback: function (e) { e.iFrameResizer.moveToAnchor(thread_fragment); }
+            }, document.getElementById("remarkbox-iframe"));
         });
+    }
+    removeChilds(parent) {
+        while (parent.lastChild) {
+            parent.removeChild(parent.lastChild);
+        }
+    }
+    create_remarkbox_iframe() {
+        var rb_owner_key = "4777168b-89b1-11eb-9666-040140774501";
+        var thread_uri = window.location.href;
+        var thread_title = window.document.title;
+        var thread_fragment = window.location.hash;
+        var rb_src = "https://my.remarkbox.com/embed" +
+            "?rb_owner_key=" + rb_owner_key +
+            "&thread_title=" + encodeURI(thread_title) +
+            "&thread_uri=" + encodeURIComponent(thread_uri) +
+            thread_fragment;
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("id", "remarkbox-iframe");
+        ifrm.setAttribute("scrolling", "no");
+        ifrm.setAttribute("src", rb_src);
+        ifrm.setAttribute("frameborder", "0");
+        ifrm.setAttribute("tabindex", "0");
+        ifrm.setAttribute("title", "Remarkbox");
+        ifrm.setAttribute("style", 'height:600px;width:100%;border:none!important"');
+        ifrm.style.width = "100%";
+        const div = document.getElementById("remarkbox-div");
+        this.removeChilds(div);
+        div.appendChild(ifrm);
+        //document.getElementsByClassName("whats-next").innerHTML = "A co ted?";
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_1__["ScullyRoutesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_social_tags_service__WEBPACK_IMPORTED_MODULE_2__["SocialTagsService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 21, vars: 9, consts: [[1, "overlay"], [1, "header-content"], [1, "top-row"], ["routerLink", "/", 1, "left-title"], [1, "header-items"], ["routerLink", "/", 1, "header-item"], ["routerLink", "/about", 1, "header-item"], [1, "main-title"], [1, "discussion"], ["id", "remarkbox-div"], ["id", "remarkbox-iframe", "src", "https://my.remarkbox.com/embed?nojs=true", "tabindex", "0", 2, "height", "600px", "width", "100%", "border", "none!important"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 20, vars: 9, consts: [[1, "overlay"], [1, "header-content"], [1, "top-row"], ["routerLink", "/", 1, "left-title"], [1, "header-items"], ["routerLink", "/", 1, "header-item"], ["routerLink", "/about", 1, "header-item"], [1, "main-title"], [1, "discussion"], ["id", "remarkbox-div"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "async");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "async");
@@ -105,9 +142,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "iframe", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "div", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         let tmp_0_0 = null;
