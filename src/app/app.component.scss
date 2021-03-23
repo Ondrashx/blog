@@ -1,7 +1,7 @@
 header {
     width:100%;
     border-bottom: solid 1px #e1e1e1;
-    min-height: 400px;
+    min-height: 500px;
     //background-image: url(../assets/home-bg.jpg);
     background-size: cover;
     position:relative;
@@ -24,7 +24,6 @@ header {
         color: white;
         padding-top: 20px;
         max-width: 1024px;
-        z-index: 2;
         margin: auto;
         padding-left: 20px;
         padding-right: 20px;
@@ -38,6 +37,7 @@ header {
             .left-title {
                 font-weight: bold;
                 font-size: 30px;
+                line-height: 30px;
                 cursor: pointer;
                 outline: none !important;
 
@@ -49,8 +49,11 @@ header {
             .header-items {
                 font-weight: bold;
                 font-size: 16px;
-                text-transform: uppercase;                
-                line-height: 30px;                
+                text-transform: uppercase;    
+                //display: block;         
+                line-height: 30px;      
+                position: relative;
+                top: 6px;          
 
                 .header-item {
                     margin-left: 2em;
@@ -75,6 +78,7 @@ header {
 
             h1 {
                 font-size: 80px;
+                line-height: 80px;
                 font-weight: 800;
                 cursor: default;                
             }

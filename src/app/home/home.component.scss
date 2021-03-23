@@ -16,11 +16,10 @@ main {
         }
     }
 
-    .example-header-image {
+    .header-image {
         width: 100px;
-        height: 100px;
-    
-        background-image: url('../../assets/money-stack.jpg');
+        height: 100px;    
+        
         background-size: cover;
     }
 }

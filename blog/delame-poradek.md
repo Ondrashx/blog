@@ -4,29 +4,21 @@ description: 'Jak lépe sledovat své cash flow. Využití moderních nástrojů
 published: true
 isBlog: true
 img: '../assets/money-stack-l.jpg'
+imgSmall: '../assets/money-stack.jpg'
+order: 2
 slugs:
     - ___UNPUBLISHED___kmfg1qq8_juziLi8bRwJIWNxabGeSrt8uo2Czff4D
     - delame-poradek
 ---
 
----
-__Advertisement :)__ 
+Pracuji na tom ...
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects! XX
-
----
-
-# h1 Heading 8-)
+<!-- # h1 Heading 8-)
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
 ##### h5 Heading
-###### h6 Heading
+###### h6 Heading -->
 
 <!-- 
 ## Horizontal Rules
