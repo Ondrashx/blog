@@ -1,7 +1,7 @@
-main {
+div {
     margin: auto;
     max-width: 1024px;
-    padding: 30px;
+    //padding: 30px;
 
     article {
         margin-bottom: 30px;
@@ -10,9 +10,9 @@ main {
             cursor: pointer;
             outline: none !important;
 
-            &:hover {
-                font-weight: bolder;
-            }
+            // &:hover {
+            //     font-weight: bolder;
+            // }
         }
     }
 

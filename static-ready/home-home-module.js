@@ -177,12 +177,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function HomeComponent_article_1_Template(rf, ctx) { if (rf & 1) {
+function HomeComponent_article_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "article");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "mat-card");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "mat-card-header", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "mat-card-title");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "mat-card", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "mat-card-header", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "mat-card-title", 7);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "mat-card-subtitle");
@@ -190,10 +190,10 @@ function HomeComponent_article_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "mat-card-actions");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "button", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "button", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "LIKE");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "button", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "button", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "SHARE");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -214,29 +214,60 @@ function HomeComponent_article_1_Template(rf, ctx) { if (rf & 1) {
 class HomeComponent {
     constructor(scully) {
         this.scully = scully;
-        this.links$ = this.scully.available$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(links => links.filter(l => l.isBlog)));
+        this.links$ = this.scully.available$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(links => links.filter(l => l.isBlog)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(links => links.sort((a, b) => a.order - b.order)));
     }
     ngOnInit() {
         // debug current pages
-        console.log('DD');
-        this.links$.subscribe((links) => {
-            console.log('X', links);
-        });
+        // this.links$.subscribe((links) => {
+        //   console.log('X', links);
+        // });
     }
     getThumbnailImgUrl(path) {
         return 'url(' + path + ')';
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_2__["ScullyRoutesService"])); };
-HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 3, vars: 3, consts: [[4, "ngFor", "ngForOf"], [1, "clickable", 3, "routerLink"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-button", ""]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "main");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, HomeComponent_article_1_Template, 13, 5, "article", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "async");
+HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: HomeComponent, selectors: [["app-home"]], decls: 24, vars: 3, consts: [[1, "px-4", "py-10", "max-w-3xl", "mx-auto", "sm:px-6", "sm:py-12", "lg:max-w-4xl", "lg:py-16", "lg:px-8", "xl:max-w-6xl"], [1, "prose", "prose-sm", "sm:prose", "lg:prose-lg", "xl:prose-2xl", "mx-auto"], [1, "lead"], [4, "ngFor", "ngForOf"], [1, "shadow-lg", "transition-all", "hover:bg-gray-100", "clickable"], [3, "routerLink"], ["mat-card-avatar", "", 1, "header-image"], [1, "font-bold", "text-2xl"], ["mat-button", "", 1, "font-semibold"]], template: function HomeComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "article", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, " V\u00EDt\u00E1m V\u00E1s na blogu osobn\u00EDch financ\u00ED a v prvn\u00ED s\u00E9rii \u010Dl\u00E1nk\u016F, jej\u00ED\u017E hlavn\u00ED n\u00E1pln\u00ED by m\u011Blo b\u00FDt postupn\u00E9 vytvo\u0159en\u00ED n\u00E1vodu, jak si ud\u011Blat po\u0159\u00E1dek ve financ\u00EDch a nab\u00FDt lep\u0161\u00ED finan\u010Dn\u00ED gramotnosti. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Motivac\u00ED je moje p\u0159esv\u011Bd\u010Den\u00ED, \u017Ee znalost problematiky star\u00E1n\u00ED se o vlastn\u00ED finan\u010Dn\u00ED prost\u0159edky, je v \u010CR \u0161patn\u00E1. Tohoto faktu pak zneu\u017E\u00EDvaj\u00ED r\u016Fzn\u00E9 instituce od st\u00E1tu po\u010D\u00EDnaje (inflace, nesmysln\u011B dotovan\u00E9 produkty pro spo\u0159en\u00ED), p\u0159es banky (poplatky fond\u016F), a\u017E po notoricky zn\u00E1m\u00E9 \u201Efinan\u010Dn\u00ED poradce\u201D (zde rad\u0161i v tuto chv\u00EDli poml\u010D\u00EDm). ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Tato s\u00E9rie je ur\u010Dena lidem, kte\u0159\u00ED cht\u011Bj\u00ED zlep\u0161it stav sv\u00FDch financ\u00ED, ale nev\u00ED jak. Rozhodn\u011B se nejedn\u00E1 o n\u00E1vod na zbohatnut\u00ED. Sp\u00ED\u0161e se zam\u011B\u0159\u00EDme na zlep\u0161en\u00ED \u0161ance n\u011Bco uspo\u0159it a udr\u017Een\u00ED hodnoty toho, co naspo\u0159\u00EDme. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "blockquote");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, " \"Jestli\u017Ee si z t\u00E9to s\u00E9rie \u010Dl\u00E1nku odnesete jednu jedinou v\u011Bc, byl bych r\u00E1d kdyby to bylo Va\u0161e osobn\u00ED p\u0159esv\u011Bd\u010Den\u00ED, \u017Ee o sv\u00E9 finance je pot\u0159eba se starat a to nikdo to za V\u00E1s neud\u011Bl\u00E1, tak dob\u0159e jako Vy.\"\" ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " Nen\u00ED k tomu pot\u0159eba doopravdy mnoho a nejt\u011B\u017E\u0161\u00ED ze v\u0161eho je prost\u011B za\u010D\u00EDt. M\u016F\u017Eete samoz\u0159ejm\u011B vyu\u017E\u00EDt slu\u017Eeb n\u011Bkter\u00E9ho z poradc\u016F, ale v tu chv\u00EDli je pot\u0159eba br\u00E1t z\u0159etel na n\u011Bkolik z\u00E1kladn\u00EDch pravidel, jak vybrat toho spr\u00E1vn\u00E9ho. I tomu bych cht\u011Bl v\u011Bnovat v budoucnu \u010Dl\u00E1nek. Nicm\u00E9n\u011B hlavn\u00ED podstatou bude vytvo\u0159en\u00ED postupn\u00E9ho n\u00E1vodu, jak se za\u010D\u00EDt o sv\u00E9 finance starat s\u00E1m. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, " V ka\u017Ed\u00E9m \u010Dl\u00E1nku se pokus\u00EDm d\u00E1le odk\u00E1zat na zaj\u00EDmav\u00E9 materi\u00E1ly, kter\u00E9 V\u00E1m umo\u017En\u00ED j\u00EDt je\u0161t\u011B d\u00E1le a informace mnou zm\u00EDn\u011Bn\u00E9 si roz\u0161\u00ED\u0159it \u010Di l\u00E9pe ov\u011B\u0159it. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, " Ze sv\u00E9 podstaty jsem hodn\u011B spo\u0159iv\u00FD \u010Dlov\u011Bk a jak by dosv\u011Bd\u010Dila moje man\u017Eelka, n\u011Bkdy a\u017E moc. I proto doporu\u010Den\u00E9 postupy budou (alespo\u0148 podle m\u00E9ho nejlep\u0161\u00EDho v\u011Bdom\u00ED a sv\u011Bdom\u00ED) pokud mo\u017Eno bez jak\u00FDchkoliv placen\u00FDch slu\u017Eeb, p\u0159\u00EDpadn\u011B pokud tomu nen\u00ED zbyt\u00ED te nejlevn\u011Bj\u0161\u00ED mo\u017En\u00E9 (za to v\u0161ak pro na\u0161e pot\u0159eby funk\u010Dn\u00ED) varianty. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "blockquote");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17, " \"Na rovinu p\u0159izn\u00E1v\u00E1m, \u017Ee nem\u00E1m \u017E\u00E1dn\u00E9 form\u00E1ln\u00ED ekonomick\u00E9 vzd\u011Bl\u00E1n\u00ED, v\u0161e co zde budu ps\u00E1t vych\u00E1z\u00ED z m\u00E9ho p\u0159esv\u011Bd\u010Den\u00ED, knih kter\u00E9 jsem p\u0159e\u010Detl a hlavn\u011B z m\u00FDch zku\u0161enost\u00ED. Nem\u00E1m jak\u00E9koliv spojen\u00ED s \u017E\u00E1dn\u00FDm z doporu\u010Dovan\u00FDch, \u010Di pro \u00FA\u010Dely demonstrace pou\u017Eit\u00FDch, produkt\u016F a slu\u017Eeb. Ne\u017Eiv\u00EDm se finan\u010Dn\u00EDm poradenstv\u00EDm.\" ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, " Budu r\u00E1d pokud m\u011B v koment\u00E1\u0159\u00EDch upozorn\u00EDte na jak\u00E9koliv chyby \u010Di nesrovnalosti. S \u010De\u0161tinou jsem v\u017Edy bojoval (pan\u00ED u\u010Ditelka Novotn\u00E1 by mohla vypr\u00E1v\u011Bt), tak\u017Ee p\u0159\u00EDle\u017Eitosti na upozorn\u011Bn\u00ED na gramatick\u00E9 chyby bude v\u00EDc ne\u017E dost. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](21, " Postupn\u011B, dle toho jak \u010Das dovol\u00ED, bych se r\u00E1d dotknul n\u00E1sleduj\u00EDc\u00EDch t\u00E9mat. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, HomeComponent_article_22_Template, 13, 5, "article", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](23, "async");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, ctx.links$));
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardHeader"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLink"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardAvatar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["AsyncPipe"]], styles: ["main[_ngcontent-%COMP%] {\n  margin: auto;\n  max-width: 1024px;\n  padding: 30px;\n}\nmain[_ngcontent-%COMP%]   article[_ngcontent-%COMP%] {\n  margin-bottom: 30px;\n}\nmain[_ngcontent-%COMP%]   article[_ngcontent-%COMP%]   .clickable[_ngcontent-%COMP%] {\n  cursor: pointer;\n  outline: none !important;\n}\nmain[_ngcontent-%COMP%]   article[_ngcontent-%COMP%]   .clickable[_ngcontent-%COMP%]:hover {\n  font-weight: bolder;\n}\nmain[_ngcontent-%COMP%]   .header-image[_ngcontent-%COMP%] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGhvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0FBQ0o7QUFDSTtFQUNJLG1CQUFBO0FBQ1I7QUFDUTtFQUNJLGVBQUE7RUFDQSx3QkFBQTtBQUNaO0FBQ1k7RUFDSSxtQkFBQTtBQUNoQjtBQUlJO0VBQ0ksWUFBQTtFQUNBLGFBQUE7RUFFQSxzQkFBQTtBQUhSIiwiZmlsZSI6ImhvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYWluIHtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIG1heC13aWR0aDogMTAyNHB4O1xyXG4gICAgcGFkZGluZzogMzBweDtcclxuXHJcbiAgICBhcnRpY2xlIHtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xyXG5cclxuICAgICAgICAuY2xpY2thYmxlIHtcclxuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgICAgICBvdXRsaW5lOiBub25lICFpbXBvcnRhbnQ7XHJcblxyXG4gICAgICAgICAgICAmOmhvdmVyIHtcclxuICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkZXI7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLmhlYWRlci1pbWFnZSB7XHJcbiAgICAgICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgICAgIGhlaWdodDogMTAwcHg7ICAgIFxyXG4gICAgICAgIFxyXG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgICB9XHJcbn1cclxuXHJcbiJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](23, 1, ctx.links$));
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardHeader"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterLink"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardAvatar"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["AsyncPipe"]], styles: ["div[_ngcontent-%COMP%] {\n  margin: auto;\n  max-width: 1024px;\n}\ndiv[_ngcontent-%COMP%]   article[_ngcontent-%COMP%] {\n  margin-bottom: 30px;\n}\ndiv[_ngcontent-%COMP%]   article[_ngcontent-%COMP%]   .clickable[_ngcontent-%COMP%] {\n  cursor: pointer;\n  outline: none !important;\n}\ndiv[_ngcontent-%COMP%]   .header-image[_ngcontent-%COMP%] {\n  width: 100px;\n  height: 100px;\n  background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGhvbWUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsaUJBQUE7QUFDRjtBQUNFO0VBQ0UsbUJBQUE7QUFDSjtBQUFJO0VBQ0UsZUFBQTtFQUNBLHdCQUFBO0FBRU47QUFJRTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7QUFGSiIsImZpbGUiOiJob21lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2IHtcbiAgbWFyZ2luOiBhdXRvO1xuICBtYXgtd2lkdGg6IDEwMjRweDtcbiAgLy9wYWRkaW5nOiAzMHB4O1xuICBhcnRpY2xlIHtcbiAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xuICAgIC5jbGlja2FibGUge1xuICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgb3V0bGluZTogbm9uZSAhaW1wb3J0YW50O1xuICAgICAgLy8gJjpob3ZlciB7XG4gICAgICAvLyAgICAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcbiAgICAgIC8vIH1cbiAgICB9XG4gIH1cbiAgLmhlYWRlci1pbWFnZSB7XG4gICAgd2lkdGg6IDEwMHB4O1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgfVxufVxyXG5cclxuIl19 */"] });
 
 
 /***/ }),

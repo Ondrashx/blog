@@ -7,18 +7,21 @@
         <div class="top-row">
             <span class="left-title" routerLink="/">Osobní finance</span>
             <div class="header-items">
-                <a class="header-item" routerLink="/">Blog</a>
-                <a class="header-item" routerLink="/about">O stránce</a>
+                <a class="header-item" routerLink="seznam">Seznam článku</a>
+                <!-- <a class="header-item" routerLink="/about">O stránce</a> -->
             </div>
         </div>
         <div class="main-title">
-            <h1>{{ (currentPage$ | async)?.title || 'Osobní finance krok za krokem' }}</h1>
+            <h1 class="pl-6 pr-6">{{ (currentPage$ | async)?.title || 'Osobní finance krok za krokem' }}</h1>
         </div>
     </div>
 
 </header>
 
-<router-outlet></router-outlet>
+<main class="antialiased text-gray-900">
+    <router-outlet></router-outlet>
+</main>
+
 
 <div class="discussion">
     <div id="remarkbox-div"> </div>

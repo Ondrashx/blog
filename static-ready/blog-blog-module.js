@@ -60,18 +60,22 @@ class BlogComponent {
     ngOnInit() { }
 }
 BlogComponent.ɵfac = function BlogComponent_Factory(t) { return new (t || BlogComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"])); };
-BlogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BlogComponent, selectors: [["app-blog"]], decls: 8, vars: 0, consts: [[1, "article-wrapper"]], template: function BlogComponent_Template(rf, ctx) { if (rf & 1) {
+BlogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: BlogComponent, selectors: [["app-blog"]], decls: 11, vars: 0, consts: [[1, "article-wrapper"], [1, "px-4", "py-10", "max-w-3xl", "mx-auto", "sm:px-6", "sm:py-12", "lg:max-w-4xl", "lg:py-16", "lg:px-8", "xl:max-w-6xl"], [1, "prose", "prose-sm", "sm:prose", "lg:prose-lg", "xl:prose-2xl", "mx-auto"]], template: function BlogComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "\n");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "\n    ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "article");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "\n        ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "scully-content");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "\n        Muj test content\n    ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "article", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "\n            ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "scully-content");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "\n        ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "\n    ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_2__["ScullyContentComponent"]], styles: [".article-wrapper[_ngcontent-%COMP%] {\n  max-width: 1024px;\n  margin: auto;\n  padding: 50px 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGJsb2cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBUUE7RUFDRSxpQkFBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtBQVBGIiwiZmlsZSI6ImJsb2cuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBoMSB7XG4vLyAgIGNvbG9yOnJnYig1MSwgNiwgMzcpO1xuLy8gICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjQ4LCAyMTEsIDIzNik7XG4vLyAgIHBhZGRpbmc6IDVweDtcbi8vICAgYm9yZGVyLXJhZGl1czogNXB4O1xuLy8gICB3aWR0aDogZml0LWNvbnRlbnQ7XG4vLyB9XG5cbi5hcnRpY2xlLXdyYXBwZXIge1xuICBtYXgtd2lkdGg6IDEwMjRweDtcbiAgbWFyZ2luOiBhdXRvO1xuICBwYWRkaW5nOiA1MHB4IDMwcHg7O1xufVxuIl19 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, directives: [_scullyio_ng_lib__WEBPACK_IMPORTED_MODULE_2__["ScullyContentComponent"]], styles: [".article-wrapper[_ngcontent-%COMP%] {\n  max-width: 1024px;\n  margin: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uXFwuLlxcLi5cXGJsb2cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBY0E7RUFDRSxpQkFBQTtFQUNBLFlBQUE7QUFiRiIsImZpbGUiOiJibG9nLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gaDEge1xuXG4vLyAgIGNvbG9yOnJnYig1MSwgNiwgMzcpO1xuXG4vLyAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDgsIDIxMSwgMjM2KTtcblxuLy8gICBwYWRkaW5nOiA1cHg7XG5cbi8vICAgYm9yZGVyLXJhZGl1czogNXB4O1xuXG4vLyAgIHdpZHRoOiBmaXQtY29udGVudDtcblxuLy8gfVxuXG4uYXJ0aWNsZS13cmFwcGVyIHtcbiAgbWF4LXdpZHRoOiAxMDI0cHg7XG4gIG1hcmdpbjogYXV0bztcbiAgLy8gcGFkZGluZzogNTBweCAzMHB4Oztcbn1cbiJdfQ== */"] });
 
 
 /***/ }),
