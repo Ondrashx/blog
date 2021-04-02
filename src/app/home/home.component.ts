@@ -10,10 +10,10 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  links$: Observable<ScullyRoute[]> = this.scully.available$.pipe(
-    map(links => links.filter(l => l.isBlog)),
-    map(links => links.sort((a,b) => a.order - b.order))
-    );
+  // links$: Observable<ScullyRoute[]> = this.scully.available$.pipe(
+  //   map(links => links.filter(l => l.isBlog)),
+  //   map(links => links.sort((a,b) => a.order - b.order))
+  //   );
 
   constructor(private scully: ScullyRoutesService) {}
 
@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
     // });
   }
 
-  getThumbnailImgUrl(path) {
-    return 'url(' + path  + ')';
-  }
+  // getThumbnailImgUrl(path) {
+  //   return 'url(' + path  + ')';
+  // }
 
 }

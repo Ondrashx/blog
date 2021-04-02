@@ -10,6 +10,7 @@ import { filter, map } from 'rxjs/operators';
 export class SocialTagsService {
 
   urlPrefix = 'https://osobni-finance.netlify.app/blog';
+  titlePrefix = 'Osobní finance - '
 
   public constructor(private titleService: Title,
     private router: Router,
@@ -34,12 +35,13 @@ export class SocialTagsService {
       this.scully.getCurrent().subscribe(
         link => {
           if (link?.title) {
-            this.titleService.setTitle(link.title);
-            this.meta.updateTag({ name: 'og:title', property: 'og:title', content: link.title });
+            let title = this.titlePrefix + link.title;
+            this.titleService.setTitle(title);
+            this.meta.updateTag({ name: 'og:title', property: 'og:title', content: title });
             this.meta.updateTag({ name: 'og:description', property: 'og:description', content: link.description});
             this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + link.img });
           } else {
-            let title = this.data.title
+            let title = this.titlePrefix + this.data.title
             this.titleService.setTitle(title);
             this.meta.updateTag({ name: 'og:title', content: title });
             this.meta.updateTag({ name: 'og:description', content: 'Osobní finance. Tečka.' });
