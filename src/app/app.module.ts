@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ArticleListModule } from './article-list/article-list.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { ArticleListModule } from './article-list/article-list.module';
     BrowserModule,
     AppRoutingModule,
     ScullyLibModule,
-    BrowserAnimationsModule,
-    ArticleListModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
