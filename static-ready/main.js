@@ -264,6 +264,8 @@ class SocialTagsService {
         this.meta = meta;
         this.urlPrefix = 'https://osobni-finance.netlify.app/blog';
         this.titlePrefix = 'Osobní finance - ';
+        this.descriptionDefault = 'Osobni finance. Návod krok za krokem jak si zlepšit finanční situaci. ETF, dluhopisy, spoření stavební a důchodoé atd. v kontextu osobních financí.';
+        this.keyWordsDefault = 'osobní finance, ETF, dluhopisy, pojištění, stavební spoření, finanční poradce, finanční poradenství, zdarma';
     }
     // skipped readonly props
     setTitleAndTags() {
@@ -274,20 +276,20 @@ class SocialTagsService {
             return route;
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["filter"])(route => route.outlet === 'primary')).subscribe(() => {
             this.scully.getCurrent().subscribe(link => {
+                let dataItem;
                 if (link === null || link === void 0 ? void 0 : link.title) {
-                    let title = this.titlePrefix + link.title;
-                    this.titleService.setTitle(title);
-                    this.meta.updateTag({ name: 'og:title', property: 'og:title', content: title });
-                    this.meta.updateTag({ name: 'og:description', property: 'og:description', content: link.description });
-                    this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + link.img });
+                    dataItem = link;
                 }
                 else {
-                    let title = this.titlePrefix + this.data.title;
-                    this.titleService.setTitle(title);
-                    this.meta.updateTag({ name: 'og:title', content: title });
-                    this.meta.updateTag({ name: 'og:description', content: 'Osobní finance. Tečka.' });
-                    this.meta.updateTag({ name: 'og:image', content: this.urlPrefix + '/' + '../assets/money-stack-l.jpg' });
+                    dataItem = this.data;
                 }
+                let title = this.titlePrefix + dataItem.title;
+                this.titleService.setTitle(title);
+                this.meta.updateTag({ name: 'og:title', property: 'og:title', content: title });
+                this.meta.updateTag({ name: 'og:description', property: 'og:description', content: dataItem.description || this.descriptionDefault });
+                this.meta.updateTag({ name: 'og:image', property: 'og:image', content: this.urlPrefix + '/' + (dataItem.img || '../assets/money-stack-l.jpg') });
+                this.meta.updateTag({ name: 'description', content: dataItem.description || this.descriptionDefault });
+                this.meta.updateTag({ name: 'keywords', dataItem: dataItem.seoKeywords || this.keyWordsDefault });
             });
         });
     }

@@ -1,6 +1,7 @@
 ---
 title: Volíme si cestu
-description: 'Starat se sám nebo zvolit poradce. Zjistíte jestli má pro Vás cenu číst tuto sérii článků dál. Možná třetí cesta. Výhody a nevýhody jednotlivých přístupů.'
+description: 'Volíme si cestu, jak se budeme starat o naše osobní finance. Starat se sám nebo zvolit poradce? Možná třetí cesta. Výhody a nevýhody jednotlivých přístupů.'
+seoKeywords: 'osobní finance, finanční poradenství, zdarma, začínáme'
 published: true
 isBlog: true
 img: '../assets/wooden-path.jpg'

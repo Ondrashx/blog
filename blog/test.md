@@ -13,6 +13,8 @@ slugs:
 Pracuji na tom ...
 
 - title, meta tags
+- scroll up on page change
+- dark mode
 - outlines
 - site.xml
 - more seo
@@ -20,7 +22,7 @@ Pracuji na tom ...
 - about
 - sharing fb, tw ...
 - LIKE and share
-- BLOG => SEZNAM
+- done: BLOG => SEZNAM
 - search
 - diskuze, CSS
 - footer

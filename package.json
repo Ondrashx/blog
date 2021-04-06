@@ -11,7 +11,7 @@
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --",
     "scully:watch": "npx scully --watch",
-    "skul": "ng build && npx scully --scanRoutes && npx scully serve --",
+    "skul": "ng build && npx scully --scanRoutes && npx scully serve --watch",
     "netlify:build": "ng build --prod && npx scully --",
     "build:prod": "cross-env NODE_ENV=production ng build --prod"
   },
