@@ -49,7 +49,7 @@ Smutným faktem navíc zůstává, že finanční poradce “zadarmo”, je ško
 
 **Pro**
 
-+ Velká dostupnost této služby (může ji dělat každý, kdo ma čistý trestní rejstřík) a tak si můžete vybrat
++ Velká dostupnost této služby a tak si můžete vybrat
 + U lepších poradců z tohoto modelu, získáte základní analýza stavu Vašich financí
 + Slušné chování (aspoň na začátku)
 + Káva nebo voda, kterou zdarma dostanete na schůzkách
@@ -106,7 +106,7 @@ Zde bych mohl skončit, doporučit ať si každý najde placeného poradce, kone
 Minimálně je nutné všímat si následujícího:
 
 + První věcí, o kterou se bude zajímat je stav vašich financí a ne prodat produkt.
-+ Musí mít certifikát od ČNB.
++ Musí mít certifikaci/zkoušky od ČNB.
 + Musí mít sjednané pojištění odpovědnosti.
 + Ideálně má certifikaci CFA (https://www.cfainstitute.org/en/programs/cfa)
 + Nevytváří, žádný tlak. Nechává automaticky čas na rozmyšlenou.
@@ -118,6 +118,9 @@ Minimálně je nutné všímat si následujícího:
 Toto je jakési minimum, ja nicméně dodám ještě jeden, který vyřadí prakticky všechny poradce “zadarmo”, ale i některé “placené“:
 
 > Poradce by neměl mít žádné vlastní produkty, které se Vám snaží prodat.
+
+Jen tak na okraj, můžete si vyzkoušet otázky ze zkoušky, které poradci musí absolvovat. Nejsou triviální. Nicméně to, že se někdo našprtá pár faktů na zkoušku, ještě neznamená, že je dobrý poradce a už vůbec to neznamená, že má dotyčný primárně za cíl pomoci financím svého klienta a ne svým financím. Na otázky se můžete podívat 
+[zde (spotřebitelské úvěry)](https://www.cnb.cz/cs/dohled-financni-trh/vykon-dohledu/povolovaci-a-schvalovaci-rizeni/povolovaci-a-schvalovaci-rizeni-podle-zakona-o-spotrebitelskem-uveru/zkousky-dle-zakona-c.-257-2016-sb.-o-spotrebitelskem-uveru/ "Spotřebitelské úvěry otázky"), případně [zde (investice)](https://www.cnb.cz/cs/dohled-financni-trh/vykon-dohledu/povolovaci-a-schvalovaci-rizeni/povolovaci-a-schvalovaci-rizeni-obchodnici-s-cennymi-papiry-investicni-zprostredkovatele/zkousky-dle-zakona-c.-256-2004-sb.-o-podnikani-na-kapitalovem-trhu-ve-zneni-pozdejsich-predpisu/ "Investice otázky") a  [zde (pojištění)](https://www.cnb.cz/cs/dohled-financni-trh/vykon-dohledu/povolovaci-a-schvalovaci-rizeni/povolovaci-a-schvalovaci-rizeni-pojistovaci-zprostredkovatele-a-samostatni-likvidatori-pojistnych-udalosti/Zkousky-dle-zakona-c.-170_2018-Sb.-o-distribuci-pojisteni-a-zajisteni/ "Pojištění otázky"). Na stránce najděte vždy odkaz ***Soubor zkouškových otázek ve formátu PDF*** a stan2te zip s PDF.
 
 Pojďme rovnou předpokládat, že jsme aplikovali všechny výše zmíněné body a sestavme seznam pro a proti:
 
@@ -168,9 +171,10 @@ Pojďme na seznam pro a proti:
 + Udělejte si pořádek ve vlastních financích. Je potřeba znát Vaše dluhy, Vaše výdaje a pravidelné náklady a samozřejmě kolik je možné investovat.
 + Vytvořte si investiční plán. Nic grandiozního, jen si řeknete, kde jste a kam se chcete ve Vámi zvoleném časovém horizontu dostat.
 + Naučte se šetřit a vyvarovat se zbytečných, především pravidelných výdajů.
-+ Vytvořte si rezervu, tak abyste byly schopni přečkat krátkodobý výpadek financí.
-+ Investujte maximum možného (kde “možné” se odvíjí od Vašich finančních možností a finančního horizontu) do diverzifikovaného nízkonákladového ETF a naučte se zvládat emoce, které určitě přijdou. Emoce zvládnete díky některým základním faktům (viz budoucí články).
-+ Vytvořte si konzervativní složku pomocí protiinflačních dluhopisů ČR
++ Vytvořte si rezervu, tak abyste byly schopni přečkat výpadek příjmů.
++ Investujte maximum možného (kde “možné” se odvíjí od Vašich finančních možností a finančního horizontu) do široce diverzifikovaného nízkonákladového fondu (např. pomocí ETF) a naučte se zvládat emoce, které určitě přijdou. Emoce zvládnete díky některým základním faktům (viz budoucí články).
++ Vytvořte si konzervativní složku investic pomocí protiinflačních dluhopisů ČR
++ Rebalancujte investice s rozumem
 + Zvažte zda populární produkty jako jsou stavebního spoření a především důchodového pojištění je pro Vás ideální.
 + Sjednejte si rozumné pojištění.
 
