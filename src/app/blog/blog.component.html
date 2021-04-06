@@ -1,10 +1,12 @@
-<!-- <h3>ScullyIo content</h3>
-<hr>
-
-<scully-content></scully-content>
-<hr>
-<h4>End of content</h4> -->
 <div class="app-center">
+    <div class="py-3 flex justify-between px-6">
+        <span class="text-left align-middle top-4 relative text-xl">12. cervna 2021 {{(currentPage$ |
+            async).publishedDate}}</span>
+        <share-buttons [theme]="'circles-dark'" class="text-right"
+            [include]="['facebook','twitter','linkedin','pinterest', 'email', 'copy']" [show]="3" [size]="1">
+        </share-buttons>
+    </div>
+
     <div class="px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl">
         <article class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
             <scully-content></scully-content>
@@ -13,5 +15,5 @@
 </div>
 
 <div class="app-center">
-    <app-discussion-wrapper ></app-discussion-wrapper>
+    <app-discussion-wrapper></app-discussion-wrapper>
 </div>

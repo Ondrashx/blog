@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
 
 declare var ng: any;
 
@@ -12,8 +14,11 @@ declare var ng: any;
 
 })
 export class BlogComponent implements OnInit {
+
+  currentPage$: Observable<ScullyRoute> = this.scully.getCurrent();
+
   ngOnInit() {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute, private scully: ScullyRoutesService,) {
   }
 }

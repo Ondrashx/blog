@@ -29,7 +29,7 @@
               "src/assets"
             ],
             "styles": [
-           
+              "src/styles2.scss",           
               "src/styles.scss"
             ],
             "scripts": []

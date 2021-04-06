@@ -12,20 +12,20 @@ slugs:
 
 Pracuji na tom ...
 
-- title, meta tags
+- done: title, meta tags
 - scroll up on page change
 - dark mode
 - outlines
 - site.xml
 - more seo
 - clanky undersconstruction
-- about
-- sharing fb, tw ...
-- LIKE and share
+- not now: about
+- done: sharing fb, tw ...
+- removed: LIKE and share
 - done: BLOG => SEZNAM
 - search
 - diskuze, CSS
-- footer
+- done: footer
 - cookies
 
  # h1 Heading 8-)

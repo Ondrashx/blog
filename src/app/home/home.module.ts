@@ -6,6 +6,9 @@ import { HomeComponent } from './home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ArticleListModule } from '../article-list/article-list.module';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 
 @NgModule({
@@ -13,7 +16,9 @@ import { ArticleListModule } from '../article-list/article-list.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ArticleListModule
+    ArticleListModule,
+    ShareButtonsModule,
+    ShareIconsModule
 
   ]
 })
