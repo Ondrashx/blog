@@ -3,6 +3,7 @@ title: 'Děláme pořádek'
 description: 'Jak lépe sledovat své příjmy a výdaje. Využití moderních nástrojů Vašeho internetového bankovnictví. Ujasnění kolik peněz vlastně máme a kde. Výdaje, příjmy, investice, dluhy, majetek - konečně přehledně.'
 seoKeywords: 'osobní finance, Výdaje, příjmy, investice, dluhy, majetek, ETF, dluhopisy, první krok'
 published: true
+publishedDate: '4.března 2021'
 isBlog: true
 img: '../assets/money-stack-l.jpg'
 imgSmall: '../assets/money-stack.jpg'
