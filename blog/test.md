@@ -10,6 +10,9 @@ slugs:
     - ___UNPUBLISHED___kn08ggus_A47WinEdOhmnBOq8mRoaMBWLN9GERj8p
 ---
 
+How etf really works
+https://www.investors.com/etfs-and-funds/etfs/what-is-etf-how-do-etfs-work/
+
 Pracuji na tom ...
 
 - done: title, meta tags
