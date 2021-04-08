@@ -228,3 +228,10 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
 
+The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
