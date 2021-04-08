@@ -89,7 +89,7 @@ Debatu o výši poplatků bankovních investičních produktů si nechám na poz
 
 ## Finanční poradce “placený”
 
-![Placený finanční poradce](./assets/medium/fin-advisor.jpg)
+![Placený finanční poradce](./assets/medium/fin-adviser.jpg)
 
 Hlavní rozdíl, který každý vnímá jako první je, že za služby tohoto typu poradců, je nutné platit. Jakým způsobem se určuje poplatek je různé. Někteří poradci, si účtují hodinovou sazbu (stejně jako právník nebo účetní), někteří jednorázovou částku. někteří ročním poplatkem, někteří z procent spravované částky a najde se i pár takových (a já především těmto tleskám), kteří se nechají platit z procent výnosu, které svému klientovi investicemi vyprodukují.
 
