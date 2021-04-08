@@ -34,7 +34,7 @@ export class DiscussionWrapperComponent implements OnInit {
   }
 
   removeChilds(parent) {
-    while (parent.lastChild) {
+    while (parent && parent.lastChild) {
       parent.removeChild(parent.lastChild);
     }
   }
