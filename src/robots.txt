@@ -1,2 +1,3 @@
+Sitemap: https://osobni-finance.netlify.app/sitemap.xml
 User-agent: *
 Disallow:
