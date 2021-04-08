@@ -1,7 +1,7 @@
 <div class="pt-11">
     <article *ngFor="let page of (links$ | async)">
-
-        <mat-card [routerLink]="page.route" class="shadow-lg transition-all hover:bg-gray-100 clickable ">
+      <a [routerLink]="page.route" >
+        <mat-card class="shadow-lg transition-all hover:bg-gray-100 clickable ">
           <mat-card-header   class="py-5">
             <div mat-card-avatar class="header-image" [style.background-image]="getThumbnailImgUrl(page.imgSmall)"></div>
             <mat-card-title class="font-bold text-2xl">{{ page.title }}</mat-card-title>
@@ -14,6 +14,8 @@
             <!-- <share-popup-button>Share</share-popup-button> -->
           </mat-card-actions>
         </mat-card>
+      </a>
+
     
     </article>
 </div>

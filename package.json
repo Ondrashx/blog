@@ -12,7 +12,7 @@
     "scully:serve": "npx scully serve --",
     "scully:watch": "npx scully --watch",
     "skul": "ng build && npx scully --scanRoutes && npx scully serve --watch",
-    "netlify:build": "ng build --prod && npx scully --",
+    "netlify:build": "ng build --prod && npx trash static-ready && npx scully --scanRoutes && npx scully --",
     "build:prod": "cross-env NODE_ENV=production ng build --prod"
   },
   "private": true,
@@ -67,6 +67,7 @@
     "postcss-scss": "^3.0.4",
     "protractor": "~7.0.0",
     "tailwindcss": "^2.0.3",
+    "trash-cli": "^4.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"

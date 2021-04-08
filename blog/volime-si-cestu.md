@@ -5,11 +5,10 @@ seoKeywords: 'osobní finance, finanční poradenství, zdarma, začínáme'
 published: true
 publishedDate: '4.března 2021'
 isBlog: true
-img: '../assets/wooden-path.jpg'
-imgSmall: '../assets/wooden-path.jpg'
+img: '../assets/wooden-path-l.jpg'
+imgSmall: '../assets/wooden-path-s.jpg'
 order: 1
 slugs:
-    - ___UNPUBLISHED___kmf3virc_UvJjVW6k1GMsEQGWQ6Oe6pyBfcmxCbJD
     - volime-si-cestu
 ---
 

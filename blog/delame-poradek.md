@@ -9,7 +9,6 @@ img: '../assets/money-stack-l.jpg'
 imgSmall: '../assets/money-stack.jpg'
 order: 2
 slugs:
-    - ___UNPUBLISHED___kmfg1qq8_juziLi8bRwJIWNxabGeSrt8uo2Czff4D
     - delame-poradek
 ---
 
@@ -23,13 +22,13 @@ Pamatujte, neděláme firemní podvojné účetnictví, které bude podlehát au
 
 Postupně vytvoříme 5 záložek. **Přijmy, Výdaje, Investice, Dluhy, Majetek Neinvestiční**
 
-![Stock Graph](./assets/blogs/delame-poradek/zalozky.jpg)
+![Záložky v osobních financích](./assets/blogs/delame-poradek/zalozky.jpg)
 
 ## Příjmy
 
 Nejdříve si do záložky Příjmy napíšeme naše čisté příjmy. Tohle by mělo být jednoduché. Neuvádějte žádný příjem z investic, pouze ze zaměstnání, případně podnikání. Například pronájem garáže, za který dostáváte tisícovku měsíčně, tak uvádět nebudeme. Přidáme i součet. Tak máme naše měsíční příjmy. To ani tak nebolelo.
 
-![Stock Graph](./assets/blogs/delame-poradek/prijmy.jpg)
+![Příjmy](./assets/blogs/delame-poradek/prijmy.jpg)
 
 Někdo nemá konstantní příjem. Stejně jsem na tom já. V tom řpípadě nezbývá než využít naše matematické schopnosti a vypočítat si průměr. Průměr za poslední rok by měl poměrně odpovídající. Vycházet můžete z daňového přiznání nebo si otevřete internetové bankovnictví a vyhledejte všechny kladné položky na všech Vašich bankovních osobních účtech za posledních 12 měsíců. Tyto čísla sečtěte a vydělte 12. Získali jste průměrný měsíční příjem. 
 
@@ -105,7 +104,7 @@ I ta nejchytřejší banka zatím neví přesně (zaplať pánbůh, ale nenechte
 
 Občas je vhodné platbu označit jako nepodstatnou.  Například si omylem přepošleme peníze z jiného účtu a hned pošleme zpět. Obě tyto platby nechcme v analýze mít, označíme je jako nepodstatné.
 
-![Rozdělení](./assets/blogs/delame-poradek/mbank-nepodstatne.jpg)
+![Nepodstatné](./assets/blogs/delame-poradek/mbank-nepodstatne.jpg)
 
 Projdeme poctivě všechny položky za poslední rok. A ano je jasné, že ne na vše si vzpomeneme za co to bylo. Budiž to pro nás ponaučení a příště dělejme tuto kategorizaci vždy jednou měsíčně. Nastavme si připomínku na 1. den v každém měsíci. Nezabere nám to pak více jak 5 minut, slibuji, a budeme mít po nějaké době skvělý přehled o našich výdajích.
 
@@ -119,11 +118,11 @@ Jak to může vypadat je zde:
 
 Na místě šedých polí vpravo byste ve svém bankovnictví uviděli celkové částky plateb z dané kategorie. Pokud jsme nezvolili stejné kategorie jako má mBank, budeme muset, využít ještě jednoho přehledu, kde je možné hledat podle libovolných kategorií.
 
-![Analýza](./assets/blogs/delame-poradek/mbank-analyza-kategorie.jpg)
+![Analýza kategorie](./assets/blogs/delame-poradek/mbank-analyza-kategorie.jpg)
 
 Do červeně vyznačeného pole, dejme postupně naše kategorie. Opět vlevo na místě šedých pruhů byste viděli částky. Celkovou částku a průmernou za měsíc najdete pod grafem.
 
-![Analýza](./assets/blogs/delame-poradek/mbank-prumer.jpg)
+![Analýza průměr](./assets/blogs/delame-poradek/mbank-prumer.jpg)
 
 Pokud jste si poctivě psali jaké kategorie jste použili (ideálně takové, které odpovídají vašim kategoriím 1:1), můžete se tímto způsobem podívat na každou kategorii, podívat se jak to vypadalo každý měsíc, spočítat si sumu za rok a měsíční průměr. A jestli si ještě pamatujete o měsíční průměr každé kategorie nám šlo - potřebujeme ho pro naši tabulku výdajů.
 
@@ -131,11 +130,11 @@ Pokud jste si poctivě psali jaké kategorie jste použili (ideálně takové, k
 
 Doplníme průměry do tabulky našich kategorií. Může to vypadat následovně:
 
-![Analýza](./assets/blogs/delame-poradek/vydaje.jpg)
+![Výdaje](./assets/blogs/delame-poradek/vydaje.jpg)
 
 Nyní se podíváme co nám měsíčně zůstane “v kapse”. Na záložku investic přidáme tento řádek:
 
-![Analýza](./assets/blogs/delame-poradek/investice-mozne-investovat.jpg)
+![Možné investovat](./assets/blogs/delame-poradek/investice-mozne-investovat.jpg)
 
 Jedná se o částku, která nám měsíčně zbývá a vrátíme se k ní později. Nyní nám zbývá doplnit tabulku investic. Pojďme na to.
 
@@ -151,7 +150,7 @@ Máte stavební spoření? Máte důchodové spoření? Máte spořící účet?
 
 Ok, když jsme si vyjasnili co rozumíme pod pojmem investice, zavzpomínejte, kde všude máte peníze. Pro zjdenodušení zahrňme do úvah i peníze pod matrací a na běžném účtu. Napišme každé takové místo na zvlášť řádek. Výsledek může být například takovýto:
 
-![Analýza](./assets/blogs/delame-poradek/investice.jpg)
+![Investice](./assets/blogs/delame-poradek/investice.jpg)
 
 Možná Vás překvapí, kde všude máte své peníze. Možná si vzpomenete dokonce později na některé další položky. Jak vidíte i ta garáž je investice, protože ji osobně nespotřebováváte, ale něco vám vydělává. Kam ale s naším domem, či bytem? Neměli bychom ho také někam uvést? V tuto chvíli pro přehled určitě ano. Dostáváme se k další záložce.
 
@@ -159,7 +158,7 @@ Možná Vás překvapí, kde všude máte své peníze. Možná si vzpomenete do
 
 Uvedeme vše co má nějakou podstatnou cenu a bylo by možné v případě nutnosti zpeněžit. V tuto chvíli spíše pro přehled a pro pořádek (koneckonců to je jaksi cíl tohoto článku). Uvedem, tedy například pole, které máme (ale nepronajímáme ho), nebo chatu. Určitě uvedeme nemovitost, kde bydlíme, či auto.
 
-![Analýza](./assets/blogs/delame-poradek/majetek.jpg)
+![Majetek](./assets/blogs/delame-poradek/majetek.jpg)
 
 ## Dluhy
 
@@ -174,7 +173,7 @@ Pokud chcete vědět jak se počítá nebo se dozvědět více přečtěte si na
 
 Dřive to bylo složitější, půjčky se velice špatno srovnávali. Především kvůli různým poplatkům, které byly, navíc ke klasickému úroku vyžadovány. Naše hlavy pomazané se na několikrát pokoušeli s tímto problémem vypořádat (nejdříve jen některé typy úvěru nebo jen od do nějaké částky…). Nakonec, po pár novelách, se jim to do značné míry podařilo a  doopravdy už teď nenajdete půjčku, kde by bylo nějak složité zjistit RPSN. Navíc ze zákona toto uvedené být musí a to dokonce správně. Pokud by údaj chyběl nebo byl špatný hrozí sankce. Nemusíte nutně nic počítat, prostě si RPSN vyžádejte a zapište na řádky vedle půjček.
 
-![Analýza](./assets/blogs/delame-poradek/dluhy.jpg)
+![Dluhy](./assets/blogs/delame-poradek/dluhy.jpg)
 
 Doufám, že je to z obrázku a názvů sloupců jasné. Poslední sloupec je spočten jako roční úrok z dlužné částky za rok děleno počtem měsíců. Není to nejpřesnější, ale pro naše účely více než adekvátní. Zajimavá je částka vyznačena červeně. Tolik naše hypotetická rodina platí měsíčně za to, že si půjčila nějaké peníze. Nejen k této částce se vrátíme v následujícím článku.
 

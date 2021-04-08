@@ -201,3 +201,30 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------
 Error, while rendering text content into route "/blog/___UNPUBLISHED___kn08ggus_A47WinEdOhmnBOq8mRoaMBWLN9GERj8p", Cannot read property 'remove' of undefined
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Error, while rendering text content into route "/blog/___UNPUBLISHED___kn08ggus_A47WinEdOhmnBOq8mRoaMBWLN9GERj8p", Cannot read property 'remove' of undefined
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Error, while rendering text content into route "/blog/___UNPUBLISHED___kn8rwz84_OgIvXUWuoW77SFh436jkMLtnbz1vjrdU", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/___UNPUBLISHED___kn8rwz84_OgIvXUWuoW77SFh436jkMLtnbz1vjrdU", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/___UNPUBLISHED___kn8shyed_4qNzjU3sF7oj3poDQzXAwARSZA0QdnUJ", Cannot read property 'remove' of undefined
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Error, while rendering text content into route "/blog/___UNPUBLISHED___kn8shyed_4qNzjU3sF7oj3poDQzXAwARSZA0QdnUJ", Cannot read property 'remove' of undefined
+The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
