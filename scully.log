@@ -242,3 +242,139 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
 
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/setrime-obecne.md is empty, scully will ignore.The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+Route "/blog/setrime-půjčky" not provided by angular app
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/setrime-půjčky"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/setrime-půjčky"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+Error, while rendering text content into route "/blog/setrime-pujcky", Cannot read property 'remove' of undefined
+Route "/blog/setrime-zábava" not provided by angular app
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/setrime-zábava"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/setrime-zábava"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+Error, while rendering text content into route "/blog/setrime-zabava", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-najem", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-najem", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-najem", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-najem", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-najem", Cannot read property 'remove' of undefined
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Error, while rendering text content into route "/blog/setrime-obecne", Cannot read property 'remove' of undefined
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Route "/list" not provided by angular app
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file ./blog/test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+

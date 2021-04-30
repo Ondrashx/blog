@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,8 +10,11 @@ import { map } from 'rxjs/operators';
 })
 export class ArticleListComponent implements OnInit {
 
+  @Input() showAll = false;
+
+
   links$: Observable<ScullyRoute[]> = this.scully.available$.pipe(
-    map(links => links.filter(l => l.isBlog)),
+    map(links => links.filter(l => l.published && (this.showAll || l.isBlog))),
     map(links => links.sort((a,b) => a.order - b.order))
     );
 
