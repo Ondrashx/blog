@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { SocialTagsService } from './services/social-tags.service';
 
 @Component({
@@ -9,12 +11,28 @@ import { SocialTagsService } from './services/social-tags.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Osobní finance';
+  title = 'Osobní finance krok za krokem 2';
 
-  currentPage$: Observable<ScullyRoute> = this.scully.getCurrent(); //available$;
+  currentPage$: Observable<ScullyRoute> = this.scully.getCurrent().pipe(tap((data)=> console.log('XX', data))); //available$;
 
   constructor(private scully: ScullyRoutesService, private socialTagsService: SocialTagsService) {
     this.socialTagsService.setTitleAndTags();
+  }
+
+  public getTitleByRoute(route: ScullyRoute) {
+    // this is not very nice, I will need to find better way
+    console.log('XZZZX', route)
+    switch (route.route) {
+      case '/financni-kalkulacky':
+        return 'Finanční kalkulačky'
+        break;
+        case '/list':
+          return 'Seznam všech článků'
+          break;  
+    
+      default:
+        break;
+    }
   }
 
   // ngOnInit() {

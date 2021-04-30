@@ -8,11 +8,12 @@
             <span class="left-title" routerLink="/">Osobní finance</span>
             <div class="header-items">
                 <a class="header-item" routerLink="/list">Seznam článku</a>
+                <a class="header-item" routerLink="/financni-kalkulacky">Kalkulačky</a>
                 <!-- <a class="header-item" routerLink="/about">O stránce</a> -->
             </div>
         </div>
         <div class="main-title">
-            <h1 class="pl-6 pr-6">{{ (currentPage$ | async)?.title || 'Osobní finance krok za krokem' }}</h1>
+            <h1 class="pl-6 pr-6">{{ (currentPage$ | async)?.title || getTitleByRoute(currentPage$ | async) || 'Osobní finance krok za krokem' }}</h1>
         </div>
     </div>
 
