@@ -1,0 +1,74 @@
+<div class="md:flex">
+    <div class="options mt-10 flex-grow flex items-center justify-center">
+
+        <div style="width: 400px">
+            <div class="flex justify-between">
+                <mat-form-field>
+                    <mat-label>Částka dnes</mat-label>
+                    <input matInput type="number"  [(ngModel)]="moneyValue" (blur)="onValueChange()">
+                    <span matSuffix>Kč</span>
+                </mat-form-field>
+            </div>
+
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Doba simulace (roky): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{yearValue}} let</label>
+                    <mat-slider class="example-margin" [max]="100" [min]="1" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="yearValue" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Inflace/deflace (%): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{inflationValue}} %</label>
+                    <mat-slider class="example-margin" [max]="10" [min]="-10" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="inflationValue" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="flex-grow flex items-center justify-center">
+
+        <table class="leading-10" style="width: 400px">
+            <tr>
+                <td >Částka stejné kupní síly za {{yearValue}} let:</td>
+                <td class="text-xl font-bold text-right">
+                    <button mat-icon-button class="relative -top-1" [cdkCopyToClipboard]="compoundBasicInfo.lastValue.toFixed(2)"><mat-icon>content_copy</mat-icon></button>
+                    <span>{{compoundBasicInfo.lastValue | number:'1.2-2'}} Kč</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<p-chart type="line" [data]="chartData" [options]="basicOptions"></p-chart>
+
+
+<div class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-16 mb-16">
+    <table>
+        <thead>
+            <th>Rok</th>
+            <th>Částka stejné kupní síly</th>
+        </thead>
+        <tr *ngFor="let entryRow of compoundBasicInfo.values.entries()">
+            <td>{{finCalcService.formatYearLabel(entryRow[0])}}</td>
+            <td>{{entryRow[1].toFixed(2) | number:'1.2-2'}} Kč</td>
+        </tr>
+    </table>
+</div>
+

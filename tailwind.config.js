@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: true,
+    // enabled: false,
     content: ['./src/**/*.{html,ts}']
   },
   darkMode: false, // or 'media' or 'class'
@@ -10,6 +10,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')
-],
+  plugins: [require('@tailwindcss/typography')],
 };

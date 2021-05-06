@@ -10,6 +10,9 @@
           "style": "scss"
         }
       },
+      "i18n": {        
+        "sourceLocale": "cs"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -32,9 +35,15 @@
             ],
             "styles": [
               "src/styles2.scss",           
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js"
+            ]
           },
           "configurations": {
             "production": {

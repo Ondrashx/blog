@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-fin-calcs-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinCalcsPageComponent implements OnInit {
 
+  @ViewChild(MatAccordion) accordion: MatAccordion;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(()=> this.accordion.openAll(), 200);
   }
 
 }

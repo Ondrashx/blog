@@ -1,4 +1,4 @@
-<div class="pt-11">
+<div class="wrapper pt-11">
     <article *ngFor="let page of (links$ | async)">
       <a [routerLink]="page.route" >
         <mat-card class="shadow-lg transition-all hover:bg-gray-100 clickable ">

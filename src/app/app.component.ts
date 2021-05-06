@@ -20,9 +20,8 @@ export class AppComponent {
   }
 
   public getTitleByRoute(route: ScullyRoute) {
-    // this is not very nice, I will need to find better way
-    console.log('XZZZX', route)
-    switch (route.route) {
+    // this is not very nice, I will need to find better way    
+    switch (route?.route) {
       case '/financni-kalkulacky':
         return 'Finanční kalkulačky'
         break;

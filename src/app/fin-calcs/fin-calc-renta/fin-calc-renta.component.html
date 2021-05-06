@@ -1,0 +1,92 @@
+<div class="md:flex">
+    <div class="options mt-10 flex-grow flex items-center justify-center">
+
+        <div style="width: 400px">
+            <div class="flex justify-between">
+                <mat-form-field>
+                    <mat-label>Celkem naspořeno</mat-label>
+                    <input matInput type="number" [(ngModel)]="startNestEgg" (blur)="onValueChange()">
+                    <span matSuffix>Kč</span>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Měsíční částka potřebná</mat-label>
+                    <input matInput type="number" [(ngModel)]="monthlyNeededValue" (blur)="onValueChange()">
+                    <span matSuffix>Kč</span>
+                </mat-form-field>
+            </div>
+
+
+            <!-- <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Doba investice (roky): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{yearValue}} let</label>
+                    <mat-slider class="example-margin" [max]="100" [min]="1" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="yearValue" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+
+            </div> -->
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Roční zhodnocení (%): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{interestValue}} %</label>
+                    <mat-slider class="example-margin" [max]="20" [min]="0" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="interestValue" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Inflace/deflace (%): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{inflationValue}} %</label>
+                    <mat-slider class="example-margin" [max]="10" [min]="-10" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="inflationValue" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="flex-grow flex items-center justify-center">
+
+        <table class="w-64 leading-10">
+            <tr>
+                <td >Celkem let, co vydrží renta:</td>
+                <td class="text-xl font-bold text-right">{{calcInfo.isInfinite ? 'Nekonečná renta' : (calcInfo.yearsCount | number:'1.0-0') + 'let'}}</td>
+            </tr>
+            <!-- <tr class="italic">
+                <td >Včetně úroků:</td>
+                <td class="text-xl text-right">({{compoundBasicInfo.lastInterest |
+                    number:'1.2-2'}} Kč)</td>
+            </tr>
+            <tr>
+                <td >Reálně naspořeno:</td>
+                <td class="text-xl font-bold text-right">{{compoundRealInfo.lastValue |
+                    number:'1.2-2'}} Kč</td>
+            </tr> -->
+        </table>
+    </div>
+</div>
+
+
+
+<p-chart type="line" [data]="chartData" [options]="basicOptions"></p-chart>
+
+
+pa
+format castky v textboxech + Kc?
+tabulka rocni
+tlacitko prepocitej mesicni castku na potrebnou castku za X let + text box pro X
+
