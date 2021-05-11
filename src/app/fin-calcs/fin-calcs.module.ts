@@ -16,6 +16,8 @@ import { FinCalcRentaComponent } from './fin-calc-renta/fin-calc-renta.component
 import { MatButtonModule } from '@angular/material/button';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { FinCalcInflationValueComponent } from './fin-calc-inflation-value/fin-calc-inflation-value.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { FinCalcInflationValueComponent } from './fin-calc-inflation-value/fin-c
     MatExpansionModule,
     MatButtonModule,
     MatIconModule,
-    ClipboardModule
+    ClipboardModule,
+    MatSlideToggleModule
   ],
   //exports: [ArticleListComponent]
 })

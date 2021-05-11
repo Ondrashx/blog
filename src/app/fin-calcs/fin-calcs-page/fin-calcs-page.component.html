@@ -5,49 +5,55 @@
   </div>
 
 
-    <div class="example-action-buttons">
-        <button mat-button (click)="accordion.openAll()">Ukázat vše</button>
-        <button mat-button (click)="accordion.closeAll()">Schovat vše</button>
-    </div>
-    <mat-accordion class="example-headers-align" multi>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title class="font-bold">
-                  Simulace investice
-                </mat-panel-title>
-                <mat-panel-description>
-                  Simuluje vývoj investované jednorázové i pravidlené měsíční částky.
-                  <!-- <mat-icon>arrow_back</mat-icon> -->
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-            <app-fin-calc-invest></app-fin-calc-invest>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title class="font-bold">
-                  Simulace inflace peněz
-                </mat-panel-title>
-                <mat-panel-description>
-                  Simuluje vývoj ceny peněz po započtení inflace.
-                  <!-- <mat-icon>account_circle</mat-icon> -->
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-            <app-fin-calc-inflation-value></app-fin-calc-inflation-value>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-              <mat-panel-title class="font-bold">
-                Simulace renty
-              </mat-panel-title>
-              <mat-panel-description>
-                Simulace odebírání měsíční renty z naspořené částky.
-                <!-- <mat-icon>account_circle</mat-icon> -->
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-          <app-fin-calc-renta>              
-          </app-fin-calc-renta>
-      </mat-expansion-panel>
+  <div class="example-action-buttons">
+    <button mat-button (click)="accordion.openAll()">Ukázat vše</button>
+    <button mat-button (click)="accordion.closeAll()">Schovat vše</button>
+    <mat-slide-toggle  class="ml-2" [(ngModel)]="showCharts">Zobrazit grafy</mat-slide-toggle>
+    <mat-slide-toggle  class="ml-2" [(ngModel)]="showTables">Zobrazit tabulky</mat-slide-toggle>
 
-    </mat-accordion>
+
+  </div>
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel [expanded]="expandFirst">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="font-bold">
+          SIMULACE INVESTICE
+        </mat-panel-title>
+        <mat-panel-description>
+          Simuluje vývoj investované jednorázové i pravidlené měsíční částky.
+          <!-- <mat-icon>arrow_back</mat-icon> -->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-fin-calc-invest (nestEggChanged)="startNestEgg = $event" (inflationValueChanged)="inflationValue = $event" 
+      (yearValueChanged)="yearValue = $event" [showCharts]="showCharts" [showTables]="showTables"></app-fin-calc-invest>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="font-bold">
+          SIMULACE INFLACE
+        </mat-panel-title>
+        <mat-panel-description>
+          Simuluje vývoj hodnoty peněz po započtení inflace.
+          <!-- <mat-icon>account_circle</mat-icon> -->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-fin-calc-inflation-value (neededRentChanged)="neededRent = $event" [showCharts]="showCharts" 
+      [showTables]="showTables" [inflationValueInput]="inflationValue" [yearValueInput]="yearValue"></app-fin-calc-inflation-value>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="font-bold">
+          SIMULACE RENTY
+        </mat-panel-title>
+        <mat-panel-description>
+          Simulace odebírání měsíční renty z naspořené částky.
+          <!-- <mat-icon>account_circle</mat-icon> -->
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-fin-calc-renta [startNestEggInput]="startNestEgg" [monthlyNeededRentInput]="neededRent" [showCharts]="showCharts" [showTables]="showTables">
+      </app-fin-calc-renta>
+    </mat-expansion-panel>
+
+  </mat-accordion>
 
 </div>

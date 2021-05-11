@@ -18,8 +18,8 @@ Pracuji na tom ...
 - done: title, meta tags
 - done: scroll up on page change
 - dark mode
-- outlines
-- site.xml
+- done: outlines
+- done: site.xml
 - more seo
 - clanky undersconstruction
 - not now: about
@@ -30,8 +30,14 @@ Pracuji na tom ...
 - diskuze, CSS
 - done: footer
 - cookies
-- expansion kalkulacek
-- kalkulacka renta
+- done: expansion kalkulacek
+- done: kalkulacka renta
+
+- show hide tables and graphs
+- connect inflace calc (years, inflation)
+- zarovant toggle s textem
+- FIn calc -> simulace
+- obrazek rpo simulace
 
  # h1 Heading 8-)
 ## h2 Heading

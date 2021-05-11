@@ -10,10 +10,18 @@ export class FinCalcsPageComponent implements OnInit {
 
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
+  public showCharts = true;
+  public showTables = true;
+  public neededRent = 20000;
+  public startNestEgg = 10000000;
+  public expandFirst = false;
+  public inflationValue = 2;
+  public yearValue = 20;
+
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(()=> this.accordion.openAll(), 200);
+    // setTimeout(()=> this.expandFirst = true, 200);
   }
 
 }

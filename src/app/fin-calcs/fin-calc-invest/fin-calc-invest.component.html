@@ -24,7 +24,7 @@
                 <div>
                     <label class="font-bold text-xl ml-3">{{yearValue}} let</label>
                     <mat-slider class="example-margin" [max]="100" [min]="1" [step]="1" [thumbLabel]="true"
-                        [(ngModel)]="yearValue" (change)="onValueChange()">
+                        [(ngModel)]="yearValue" (change)="onValueChange('year')">
                     </mat-slider>
                 </div>
             </div>
@@ -48,8 +48,39 @@
                 <div>
                     <label class="font-bold text-xl ml-3">{{inflationValue}} %</label>
                     <mat-slider class="example-margin" [max]="10" [min]="-10" [step]="1" [thumbLabel]="true"
-                        [(ngModel)]="inflationValue" (change)="onValueChange()">
+                        [(ngModel)]="inflationValue" (change)="onValueChange('inflation')">
                     </mat-slider>
+                </div>
+            </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Zvýšení měsíční investice za rok (%): </label>
+                </span>
+                <div>
+                    <label class="font-bold text-xl ml-3">{{salaryInterestYearlyRaise}} %</label>
+                    <mat-slider class="example-margin" [max]="10" [min]="-10" [step]="1" [thumbLabel]="true"
+                        [(ngModel)]="salaryInterestYearlyRaise" (change)="onValueChange()">
+                    </mat-slider>
+                </div>
+            </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Zobrazit graf: </label>
+                </span>
+                <div class="w-44">     
+                    <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showCharts ? 'Ano' : 'Ne'}}</label>
+                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showCharts"></mat-slide-toggle>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Zobrazit tabulku: </label>
+                </span>
+                <div class="w-44">     
+                    <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showTables ? 'Ano' : 'Ne'}}</label>
+                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showTables"></mat-slide-toggle>
                 </div>
             </div>
         </div>
@@ -64,18 +95,17 @@
             <tr>
                 <td >Celkem naspořeno:</td>
                 <td class="text-xl font-bold text-right">
-                    <button mat-icon-button class="relative -top-1" [cdkCopyToClipboard]="compoundBasicInfo.lastValue.toFixed(2)"><mat-icon>content_copy</mat-icon></button>
-                    <span>{{compoundBasicInfo.lastValue | number:'1.2-2'}} Kč</span>
+                    <button mat-icon-button class="relative -top-1" [cdkCopyToClipboard]="basicInvestInfo.lastValue.toFixed(2)"><mat-icon>content_copy</mat-icon></button>
+                    <span>{{basicInvestInfo.lastValue | number:'1.2-2'}} Kč</span>
                 </td>
             </tr>
             <tr class="italic">
                 <td >Včetně úroků:</td>
-                <td class="text-xl text-right">({{compoundBasicInfo.lastInterest |
-                    number:'1.2-2'}} Kč)</td>
+                <td class="text-xl text-right">({{basicInvestInfo.lastInterest | number:'1.2-2'}} Kč)</td>
             </tr>
             <tr>
                 <td >Reálně naspořeno:</td>
-                <td class="text-xl font-bold text-right">{{compoundRealInfo.lastValue |
+                <td class="text-xl font-bold text-right">{{realInvestInfo.lastValue |
                     number:'1.2-2'}} Kč</td>
             </tr>
         </table>
@@ -84,4 +114,21 @@
 
 
 
-<p-chart type="line" [data]="chartData" [options]="basicOptions"></p-chart>
+<p-chart *ngIf="showCharts" type="line" [data]="chartData" [options]="chartOptions"></p-chart>
+
+<div *ngIf="showTables" class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-16 mb-16">
+    <table>
+        <thead>
+            <th class="w-24">Rok</th>
+            <th>Hodnota investice</th>
+            <th>Získáno na úrocích za minulý rok</th>
+            <th>Měsíční investice</th>
+        </thead>
+        <tr *ngFor="let entryRow of getCalculatedInvestInfo()">
+            <td class="w-24">{{finCalcService.formatYearLabel(entryRow[0])}}</td>
+            <td>{{(entryRow[1]).value | number:'1.2-2'}} Kč</td>
+            <td>{{(entryRow[1]).valueFromInterest | number:'1.2-2'}} Kč</td>
+            <td>{{(entryRow[1]).monthlyInvestment | number:'1.2-2'}} Kč</td>
+        </tr>
+    </table>
+</div>

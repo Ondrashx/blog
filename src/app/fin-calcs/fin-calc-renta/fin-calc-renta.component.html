@@ -6,12 +6,14 @@
                 <mat-form-field>
                     <mat-label>Celkem naspořeno</mat-label>
                     <input matInput type="number" [(ngModel)]="startNestEgg" (blur)="onValueChange()">
+                    <!-- (blur)="onValueChange()" -->
                     <span matSuffix>Kč</span>
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Měsíční částka potřebná</mat-label>
-                    <input matInput type="number" [(ngModel)]="monthlyNeededValue" (blur)="onValueChange()">
+                    <input matInput type="number" [(ngModel)]="monthlyNeededRent" (blur)="onValueChange()">
+                    <!-- (blur)="onValueChange()" -->
                     <span matSuffix>Kč</span>
                 </mat-form-field>
             </div>
@@ -53,40 +55,71 @@
                     </mat-slider>
                 </div>
             </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Přebírat investici a rentu: </label>
+                </span>
+                <div class="w-44">     
+                    <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{isConnected ? 'Ano' : 'Ne'}}</label>
+                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="isConnected" (change)="isConnectedChanged()"></mat-slide-toggle>
+                </div>
+            </div>
+
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Zobrazit graf: </label>
+                </span>
+                <div class="w-44">     
+                    <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showCharts ? 'Ano' : 'Ne'}}</label>
+                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showCharts"></mat-slide-toggle>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <span class="label-container leading-10">
+                    <label>Zobrazit tabulku: </label>
+                </span>
+                <div class="w-44">     
+                    <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showTables ? 'Ano' : 'Ne'}}</label>
+                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showTables"></mat-slide-toggle>
+                </div>
+            </div>
         </div>
-
-
-
     </div>
 
     <div class="flex-grow flex items-center justify-center">
 
         <table class="w-64 leading-10">
             <tr>
-                <td >Celkem let, co vydrží renta:</td>
-                <td class="text-xl font-bold text-right">{{calcInfo.isInfinite ? 'Nekonečná renta' : (calcInfo.yearsCount | number:'1.0-0') + 'let'}}</td>
+                <td *ngIf="!calcInfo.isInfinite">Celkem let, co vydrží renta:</td>
+                <td class="text-xl font-bold text-right">{{calcInfo.isInfinite ? 'Nekonečná renta' : (calcInfo.yearsCount | number:'1.0-0') + ' let'}}</td>
             </tr>
-            <!-- <tr class="italic">
-                <td >Včetně úroků:</td>
-                <td class="text-xl text-right">({{compoundBasicInfo.lastInterest |
-                    number:'1.2-2'}} Kč)</td>
-            </tr>
-            <tr>
-                <td >Reálně naspořeno:</td>
-                <td class="text-xl font-bold text-right">{{compoundRealInfo.lastValue |
-                    number:'1.2-2'}} Kč</td>
-            </tr> -->
         </table>
     </div>
 </div>
 
 
 
-<p-chart type="line" [data]="chartData" [options]="basicOptions"></p-chart>
+<p-chart *ngIf="showCharts" type="line" [data]="chartData" [options]="basicOptions"></p-chart>
 
 
-pa
-format castky v textboxech + Kc?
-tabulka rocni
-tlacitko prepocitej mesicni castku na potrebnou castku za X let + text box pro X
+<div *ngIf="showTables" class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-16 mb-16">
+    <table>
+        <thead>
+            <th class="w-24">Rok</th>
+            <th class="w-40">Zbývající hodnota investice</th>
+            <th>Potřebná měsíční renta po inflaci</th>
+            <th>Roční renta v tomto roce celkem</th>
+            <th>Získáno na úrocích za minulý rok</th>
+        </thead>
+        <tr *ngFor="let entryRow of getCalculatedRentaInfo()">
+            <td class="w-24">{{finCalcService.formatYearLabel(entryRow[0])}}</td>
+            <td>{{(entryRow[1]).remainingMoney | number:'1.2-2'}} Kč</td>
+            <td>{{(entryRow[1]).monthlyNeededValue | number:'1.2-2'}} Kč</td>
+            <td>{{(entryRow[1]).monthlyNeededValue*12 | number:'1.2-2'}} Kč</td>
+            <td>{{(entryRow[1]).gainFromInterest | number:'1.2-2'}} Kč</td>
+        </tr>
+    </table>
+</div>
+
 

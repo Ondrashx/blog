@@ -1,5 +1,5 @@
 <header
-    [style.background-image]="(currentPage$ | async)?.img != null ? 'url(' + (currentPage$ | async)?.img + ')' :  'url(../assets/home-bg-s.jpg)'">
+    [style.background-image]="(currentPage$ | async)?.img != null ? 'url(' + (currentPage$ | async)?.img + ')' :  getImgByRoute(currentPage$ | async)">
 
     <div class="overlay">
     </div>

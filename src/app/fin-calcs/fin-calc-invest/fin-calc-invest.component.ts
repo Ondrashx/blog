@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CompoundInfo, FinCalcService } from '../fin-calc.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { InvestInfo, FinCalcService } from '../fin-calc.service';
 
 @Component({
   selector: 'app-fin-calc-invest',
@@ -8,6 +9,13 @@ import { CompoundInfo, FinCalcService } from '../fin-calc.service';
 })
 export class FinCalcInvestComponent implements OnInit {
 
+  @Input() public showCharts: false;
+  @Input() public showTables: false;
+
+  @Output() public nestEggChanged = new EventEmitter<number>();
+  @Output() public inflationValueChanged = new EventEmitter<number>()
+  @Output() public yearValueChanged = new EventEmitter<number>()
+
   public chartData;
 
   public yearValue = 20;
@@ -15,9 +23,10 @@ export class FinCalcInvestComponent implements OnInit {
   public investMonthlyValue = 10000
   public interestValue = 4;
   public inflationValue = 2;
+  public salaryInterestYearlyRaise = 1;
 
-  
-  public basicOptions = {
+
+  public chartOptions = {
     legend: {
       labels: {
         fontColor: '#495057'
@@ -37,11 +46,16 @@ export class FinCalcInvestComponent implements OnInit {
     }
   };
 
-  public compoundBasicInfo: CompoundInfo;
-  public compoundRealInfo: CompoundInfo;
+  public basicInvestInfo: InvestInfo;
+  public realInvestInfo: InvestInfo;
 
-  onValueChange() {
+
+  onValueChange(valueType: 'inflation' | 'year' | 'other' = 'other') {
     console.log('change');
+    if (valueType === 'inflation') this.inflationValueChanged.emit(this.inflationValue);
+    if (valueType === 'year') this.yearValueChanged.emit(this.yearValue);
+
+    this.nestEggChanged.emit(this.basicInvestInfo.lastValue);
     // workaround for blur vs chart redraw weird scroll
     setTimeout(() => this.recompute(), 50);
   }
@@ -49,35 +63,43 @@ export class FinCalcInvestComponent implements OnInit {
   private recompute() {
     const years = this.finCalcService.generateArrayOfNumbers(this.yearValue + 1);
 
-    this.compoundBasicInfo = this.finCalcService.generateCompoundInterest(this.investValue, this.investMonthlyValue, this.interestValue, years);
-    this.compoundRealInfo = this.finCalcService.generateCompoundInterest(this.investValue, this.investMonthlyValue, this.interestValue - this.inflationValue, years);
+    this.basicInvestInfo = this.finCalcService.calculateInvestInfo(this.investValue, this.investMonthlyValue,
+      this.interestValue, years, this.salaryInterestYearlyRaise);
+    this.realInvestInfo = this.finCalcService.calculateInvestInfo(this.investValue, this.investMonthlyValue,
+      this.interestValue - this.inflationValue, years, this.salaryInterestYearlyRaise);
 
     this.chartData = {
       labels: years.map(y => this.finCalcService.formatYearLabel(y)),
       datasets: [
         {
-          label: 'Zhodnocení',
-          data: Array.from(this.compoundBasicInfo.values.values()).map(v => v.toFixed(2)),
+          label: 'Zhodnocení investice',
+          data: Array.from(this.basicInvestInfo.values.values()).map(v => v.value.toFixed(2)),
           fill: true,
           borderColor: '#42A5F5'
         },
         {
-          label: 'Reálné zhodnocení', 
-          data: Array.from(this.compoundRealInfo.values.values()).map(v => v.toFixed(2)),
+          label: 'Reálné zhodnocení investice',
+          data: Array.from(this.realInvestInfo.values.values()).map(v => v.value.toFixed(2)),
           fill: true,
           borderColor: '#FFA726'
         }
       ]
     }
 
+    this.nestEggChanged.emit(this.basicInvestInfo.lastValue);
+
   }
 
-  constructor(private finCalcService: FinCalcService) { }
+  constructor(public finCalcService: FinCalcService) { }
 
 
 
   ngOnInit(): void {
     this.recompute();
+  }
+
+  public getCalculatedInvestInfo() {
+    return Array.from(this.basicInvestInfo.values.entries());
   }
 
 }

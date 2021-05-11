@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
 
 @Component({
@@ -7,14 +7,44 @@ import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
   styleUrls: ['./fin-calc-renta.component.scss']
 })
 export class FinCalcRentaComponent implements OnInit {
+  
 
-  public chartData;
+  @Input() public showCharts: false;
+  @Input() public showTables: false;
 
-  public startNestEgg = 1000000;
+
+
+  private _startNestEggInput: number;
+  public get startNestEggInput() : number {
+    return this._startNestEggInput;
+  }
+  @Input() public set startNestEggInput(v : number) {
+    this._startNestEggInput = Math.round(v);
+    if (this.isConnected) {
+      this.startNestEgg = this._startNestEggInput;
+    }
+    this.recompute();
+  }
+
+  
+  private _monthlyNeededRentInput: number;
+  public get monthlyNeededRentInput() : number {
+    return this._monthlyNeededRentInput;
+  }
+  @Input() public set monthlyNeededRentInput(v : number) {
+    this._monthlyNeededRentInput = Math.round(v);
+    if (this.isConnected) {
+      this.monthlyNeededRent = this._monthlyNeededRentInput;
+    }
+    this.recompute();
+  }
+  
+  public isConnected = false;
+  public startNestEgg = 10000000;
+  public monthlyNeededRent = 20000;
+  public chartData: any;
   public inflationValue = 2;
-  public monthlyNeededValue = 10000;
   public interestValue = 4;
-
   public calcInfo: RentaCalcInfo;
 
 
@@ -62,22 +92,34 @@ export class FinCalcRentaComponent implements OnInit {
     }
   };
 
-  constructor(private finCalcService: FinCalcService) { }
+  constructor(public finCalcService: FinCalcService) { }
 
   ngOnInit(): void {
     this.recompute();
   }
 
   public onValueChange() {
-    console.log('change');
     // workaround for blur vs chart redraw weird scroll
     setTimeout(() => this.recompute(), 50);
 
   }
 
-  public recompute(): void {
+  public getCalculatedRentaInfo() {
+    return Array.from(this.calcInfo.values.entries());
+  }
 
-    this.calcInfo = this.finCalcService.generateRentaCalcInfo(this.startNestEgg, this.monthlyNeededValue, this.interestValue, this.inflationValue);
+
+  public isConnectedChanged() {
+    if (this.isConnected) {
+      this.startNestEgg = this._startNestEggInput;
+      this.monthlyNeededRent = this._monthlyNeededRentInput;
+       this.recompute();
+    }
+  }
+
+  private recompute(): void {
+
+    this.calcInfo = this.finCalcService.generateRentaCalcInfo(this.startNestEgg, this.monthlyNeededRent, this.interestValue, this.inflationValue);
     const years = this.finCalcService.generateArrayOfNumbers(this.calcInfo.yearsCount + 1);
 
     this.chartData = {
@@ -99,7 +141,7 @@ export class FinCalcRentaComponent implements OnInit {
         },
         {
           label: 'Zisk z úroků z úspor',
-          data: Array.from(this.calcInfo.values.values()).map(v => v.gainFromInterest.toFixed(2)),
+          data: Array.from(this.calcInfo.values.values()).map(v => v.gainFromInterest == null ? null : (v.gainFromInterest/12).toFixed(2)),
           fill: true,
           yAxisID: 'B',
           borderColor: 'green'
@@ -107,6 +149,7 @@ export class FinCalcRentaComponent implements OnInit {
       ]
     }
   }
+
 }
 
 
