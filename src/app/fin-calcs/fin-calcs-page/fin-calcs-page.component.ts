@@ -17,6 +17,7 @@ export class FinCalcsPageComponent implements OnInit {
   public expandFirst = false;
   public inflationValue = 2;
   public yearValue = 20;
+  public expPanelHeight = '90px';
 
   constructor() { }
 

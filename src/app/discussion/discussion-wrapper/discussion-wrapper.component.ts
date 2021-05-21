@@ -62,8 +62,11 @@ export class DiscussionWrapperComponent implements OnInit {
     ifrm.setAttribute("style", 'height:600px;width:100%;border:none!important"');
     ifrm.style.width = "100%";
     const  div = document.getElementById("remarkbox-div");
-    this.removeChilds(div);
-    div.appendChild(ifrm);
+    if (div) {
+      this.removeChilds(div);
+      div.appendChild(ifrm);
+    }
+
     //document.getElementsByClassName("whats-next").innerHTML = "A co ted?";
   }
 

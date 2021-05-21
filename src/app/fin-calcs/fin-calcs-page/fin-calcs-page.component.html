@@ -5,17 +5,16 @@
   </div>
 
 
-  <div class="example-action-buttons">
+  <div class="example-action-buttons pb-3">
     <button mat-button (click)="accordion.openAll()">Ukázat vše</button>
     <button mat-button (click)="accordion.closeAll()">Schovat vše</button>
     <mat-slide-toggle  class="ml-2" [(ngModel)]="showCharts">Zobrazit grafy</mat-slide-toggle>
     <mat-slide-toggle  class="ml-2" [(ngModel)]="showTables">Zobrazit tabulky</mat-slide-toggle>
-
-
   </div>
+
   <mat-accordion class="example-headers-align" multi>
     <mat-expansion-panel [expanded]="expandFirst">
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header [collapsedHeight]="expPanelHeight" [expandedHeight]="expPanelHeight">
         <mat-panel-title class="font-bold">
           SIMULACE INVESTICE
         </mat-panel-title>
@@ -28,7 +27,7 @@
       (yearValueChanged)="yearValue = $event" [showCharts]="showCharts" [showTables]="showTables"></app-fin-calc-invest>
     </mat-expansion-panel>
     <mat-expansion-panel>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header [collapsedHeight]="expPanelHeight" [expandedHeight]="expPanelHeight">
         <mat-panel-title class="font-bold">
           SIMULACE INFLACE
         </mat-panel-title>
@@ -41,7 +40,7 @@
       [showTables]="showTables" [inflationValueInput]="inflationValue" [yearValueInput]="yearValue"></app-fin-calc-inflation-value>
     </mat-expansion-panel>
     <mat-expansion-panel>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header [collapsedHeight]="expPanelHeight" [expandedHeight]="expPanelHeight">
         <mat-panel-title class="font-bold">
           SIMULACE RENTY
         </mat-panel-title>

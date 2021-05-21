@@ -1,16 +1,16 @@
 <div class="md:flex">
     <div class="options mt-10 flex-grow flex items-center justify-center">
 
-        <div style="width: 400px">
+        <div style="width: 370px">
             <div class="flex justify-between">
-                <mat-form-field>
+                <mat-form-field [style.width.px]=150>
                     <mat-label>Celkem naspořeno</mat-label>
                     <input matInput type="number" [(ngModel)]="startNestEgg" (blur)="onValueChange()">
                     <!-- (blur)="onValueChange()" -->
                     <span matSuffix>Kč</span>
                 </mat-form-field>
 
-                <mat-form-field>
+                <mat-form-field [style.width.px]=150>
                     <mat-label>Měsíční částka potřebná</mat-label>
                     <input matInput type="number" [(ngModel)]="monthlyNeededRent" (blur)="onValueChange()">
                     <!-- (blur)="onValueChange()" -->

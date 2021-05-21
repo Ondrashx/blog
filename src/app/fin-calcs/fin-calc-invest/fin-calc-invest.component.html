@@ -1,15 +1,15 @@
 <div class="md:flex">
     <div class="options mt-10 flex-grow flex items-center justify-center">
 
-        <div style="width: 400px">
+        <div style="width: 370px">
             <div class="flex justify-between">
-                <mat-form-field>
+                <mat-form-field [style.width.px]=150>
                     <mat-label>Počáteční částka investice</mat-label>
                     <input matInput type="number"  [(ngModel)]="investValue" (blur)="onValueChange()">
                     <span matSuffix>Kč</span>
                 </mat-form-field>
 
-                <mat-form-field >
+                <mat-form-field [style.width.px]=150>
                     <mat-label>Měsíční částka investice</mat-label>
                     <input matInput type="number"  [(ngModel)]="investMonthlyValue" (blur)="onValueChange()">
                     <span matSuffix>Kč</span>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="flex justify-between">
-                <span class="label-container leading-10">
+                <span class="label-container leading-10 w-36">
                     <label>Zvýšení měsíční investice za rok (%): </label>
                 </span>
                 <div>
@@ -91,7 +91,7 @@
 
     <div class="flex-grow flex items-center justify-center">
 
-        <table class="leading-10" style="width: 400px">
+        <table class="leading-10">
             <tr>
                 <td >Celkem naspořeno:</td>
                 <td class="text-xl font-bold text-right">

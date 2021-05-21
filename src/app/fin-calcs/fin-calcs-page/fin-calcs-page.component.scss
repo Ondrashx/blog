@@ -3,3 +3,9 @@
     max-width: 1024px;
 
 }
+
+::ng-deep {
+    .mat-expansion-panel{
+        margin-bottom: 1rem !important
+      }
+}
