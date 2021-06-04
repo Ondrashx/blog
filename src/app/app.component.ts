@@ -42,7 +42,7 @@ export class AppComponent {
         break;
 
       default:
-        return 'url(../assets/home-bg-s.jpg)'
+        return 'url(../assets/freedom.jpg)'
         break;
     }
   }

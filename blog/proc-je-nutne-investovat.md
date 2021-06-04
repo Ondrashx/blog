@@ -28,12 +28,12 @@ Dříve si lidi ukládali své úspory do slamníku nebo je zakopali do země. T
 
 Dnes je však situace trochu jiná a největším problémem se stává právě bod číslo 3. Bod 1. 2. a 4. nám sice splní kdejaký běžný bankovní účet a nemusíme za to zaplatit dokonce ani korunu - nádhera. Pokud peníze necháme nicméně jen někde ležet, máme prakticky jistotu, že se vzdáváme požadavku číslo 3. To jest, až pro peníze přijdeme a budeme si za ně něco chtít koupit, nekoupíme si za ně to samé, co v době vkladu - koupíme si toho míň. Zjednodušeně řečeno, peníze díky ekonomickému jevu jménem inflace, pořád ztrácejí na hodnotě. 
 
-Do jisté míry nám může být jedno jestli nám někdo část úspor ukradl (bod 1.) nebo došlo ke snížení kupní síly našich úspor. Například ... . Dejme tomu, že jsme si před rokem dali do slamníku 100 Kč a v den úschovy těchto penez jsme byli v obchodě a rohlík stál 1 korunu (kdybychom tedy místo úschovy peněz do slamníku v ten samý den koupili za celých 100 korun rohlíky, měli bychom 100 rohlíčku). Po roce si peníze ze slamníku vezmeme a budeme uvažovat 2 scénáře:
+Do jisté míry nám může být jedno jestli nám někdo část úspor ukradl (bod 1.) nebo došlo ke snížení kupní síly našich úspor. Například ... . Dejme tomu, že jsme si před rokem dali do slamníku 100 Kč a v den úschovy těchto peněz jsme byli v obchodě a rohlík stál 1 korunu (kdybychom tedy místo úschovy peněz do slamníku v ten samý den koupili za celých 100 korun rohlíky, měli bychom 100 rohlíčku). Po roce si peníze ze slamníku vezmeme a budeme uvažovat 2 scénáře:
 
 - zjistíme, že nám někdo 20 korun sebral, takže máme jen 80 Kč. Když půjdeme do obchodu a rohlík bude stát pořád 1 Kč, koupíme si 80 rohlíků.
 - zjistíme, že tam máme pořád celých 100 Kč (jupí slamník funguje!!), s radostí jdeme do obchodu si koupit naše rohlíky. Ale protože byla za poslední rok inflace 25% (zde hodně přestřeluji), rohlík nás nestojí 1 Kč, ale 1,25 Kč. Rohlíků si tedy koupíme 80.
 
-Jak je vidět koupíme si v obou situácích to samé. V prvním scénáři nám nebyl splněn požadavek 1. Ve druhém zase požadavek 3. Výsledek je ale ten samý. Máme pouze 80 rohlíků - a máme hlad.
+Jak je vidět koupíme si v obou situácích to samé. V prvním scénáři nám nebyl splněn požadavek z bodu 1. Ve druhém zase požadavek z bodu 3. Výsledek je ale ten samý. Máme pouze 80 rohlíků - a máme hlad.
 
 
 ## Inflace
@@ -41,8 +41,8 @@ Inflace se dá vyjadřovat různě (měsíční, čtvrtletní, průměr za rok, 
 
 > Inflace je u většiny ekonomů definována jako nárůst všeobecné cenové hladiny zboží a služeb v ekonomice v určitém časovém období.
 
-### Co je dobré o inflaci vědět
-My si zde uvedeme jen pár základních faktů, protože nyní nám jde jen o to ukázat, že peníze, které neinvestujeme, ztrácí na hodnotě a ne pitvat jak (a jeslti z našeho pohledu správně) se inflace počítá. O inflaci je nicméně dobré vědět minimálně toto:
+My si zde uvedeme jen pár základních faktů, protože nyní nám jde jen o to ukázat, že peníze, které neinvestujeme, ztrácí na hodnotě a ne pitvat jak (a jestli z našeho pohledu správně) se inflace počítá. O inflaci je nicméně dobré vědět minimálně následující.
+### Jak se počítá
 
 Inflace se počítá ze spotřebního koše, který reprezentuje v jednotlivých kategoriích, co si lidé kupují. Produktů v koši jsou řádově stovky. Kategorií je pak dvanáct.
 
@@ -56,15 +56,17 @@ Každé položce je přiřčena váha. To znamená, že změna o korunu v katego
 
 Z výše uvedeného mimo jiné vyplývá, že reálně každého zasáhne inflace (zdražování chceteli) jinak. Mě jakožto nekuřáka vůbec nezasáhne (alespoň přímo) zdražení cigaret. Proto, pokud vidíme v novinách, že inflace je X%, ještě to neznamená nutně, že i naše náklady se zvýší o X%.
 
-Opakem inflace je deflace, kdy si za stejné množství peněz můžeme někdy později koupit více zboží. I k defalci docházelo, ale již několik dekád se musíme smířit s tím, že naše ekonomika jede spíše na vlně inflace.
+Jak se přesně počítá se můžete dočíst v [metodické příruččce](https://www.czso.cz/documents/10180/26822363/manual_isc_2021.pdf/06963cd6-53d0-4b9b-9f7e-b7465060ff71?version=1.1). Veškeré informace je možné dohledat na stránkách ČSÚ.
 
-Jak se přesně počítá se můžete dočíst v [metodické příruččce](https://www.czso.cz/documents/10180/26822363/manual_isc_2021.pdf/06963cd6-53d0-4b9b-9f7e-b7465060ff71?version=1.1)
+Jak jde vidět výše, složením spotřebního koše a určením vah je možné prakticky vyčarovat jakoukoliv hodnotu, kterou pak ČSÚ, prezentuje jako inflaci. Asi Vás překvapí, že v koši například úplně chybí cena vlastního bydlení. Sice zde najdeme například nájemné, které by mělo podle jisté logiky, do určité míry kopírovat cenu koupě bytu, domku nebo pozemku, ale položky určující cenu vlasntího bydlení zde z 99% procent chybí (jsou zde pouze položky do běžné údržby, jako cena umyvadla, zaclonové tyče atd.). 
 
-Veškeré informace je možné dohledat na stránkách ČSÚ.
+> Inflace by se zřejmě za minulé roky blížila možná dvoucifernému číslu pokud by do ní byla nějakým způsobem promítnuta cena pořízení vlastního bydlení. 
 
-## Historie
+Mimochodem, opakem inflace je deflace, kdy si za stejné množství peněz můžeme někdy později koupit více zboží. I k deflaci docházelo, ale již několik dekád se musíme smířit s tím, že naše ekonomika jede spíše na vlně inflace.
 
-Aby se lépe dalo porovnávat, počítá se míra inflace pomocí tzv. bázického indexu.  V roce 2015 se spočítala, co kolik v průměru stojí a této hodnotě se přiřadila základní hodnota 100. Oproti této hodnotě se pak odvíjí hodnoty indexu v nsáledujících i předchozích letech. Podívejme se jak se vyvíjel v minulosti:
+### Historie
+
+Aby se lépe dalo porovnávat, vyjadřuje se míra inflace pomocí tzv. bázického indexu.  V roce 2015 se spočítala, co kolik v průměru stojí a této hodnotě se přiřadila základní hodnota 100. Oproti této hodnotě se pak odvíjí hodnoty indexu v následujících i předchozích letech. Podívejme se jak se vyvíjel v minulosti:
 
 ![Historie inflace](./assets/inflace-historie.jpg)
 
@@ -76,23 +78,23 @@ Stejná informace, vyjádřená pomocí meziročního procentuálního navýšen
 
 Pro zajímvost i o trochu hlubší pohled do historie, je zajimavý graf od ČSÚ, který porovnává vývoj mezd a míru inflace mezi lety 1993 a 2018:
 
-![Historie inflace vs. mzdy](./assets/inflace-historie-procenta.jpg)
+![Historie inflace vs. mzdy](./assets/inflace-vs-mzdy.jpg)
 
-Tento graf je z této krátké prezentace[této krátké prezentace](https://www.czso.cz/documents/10180/92010922/3202031901_cen.pdf/1242aa1a-46a0-46c5-b578-7f377a085142?version=1.3), kterou stojí za to shlédnout. Já si dovolím uvést ještě jednu stránku z tohoto materiálu. Na ní jsem do červeného rámečku dal poslední dvě položky. Cukr, je jako jediný zástupce položek spotřebního koše na tomto obrázku, který zlevnil (ve spotřebním koši jsou i jiné). Naopak brambory, jsou zástupcem položky, která  zdražila významně - skoro 6x. O kolik zdražilo bydlení radši uvádět nebudu.
+Tento graf je z [této krátké prezentace](https://www.czso.cz/documents/10180/92010922/3202031901_cen.pdf/1242aa1a-46a0-46c5-b578-7f377a085142?version=1.3), kterou stojí za to shlédnout. Já si dovolím uvést ještě jednu stránku z tohoto materiálu. Na ní jsem do červeného rámečku dal poslední dvě položky. Cukr, je jako jediný zástupce položek spotřebního koše na tomto obrázku, který zlevnil (ve spotřebním koši jsou i jiné). Naopak brambory, jsou zástupcem položky, která  zdražila významně - skoro 6x. O kolik zdražilo bydlení radši uvádět nebudu.
 
 ![Historie inflace potravin](./assets/inflace-potraviny.jpg)
 
-Jak jde vidět, ve sledované historii dochází v průměru pouze k inflaci. Deflaci tento sledovaný úsek na úrovni zprůměrovaných hodnot nezná. Navíc je dobré si uvědomit, že při uvažování o inflaci v procentech na meziročních průměrech je nutné do výpočtu zanést složený úrok. Jinými slovy nelze pouze procenta sečítat, pokud chceme vědět mezi dvěma roky výslednou inflaci. To se může zdát jako zanedbatelná věc, ale opak je pravdou. Složený úrok je poměrně mocný, jak si za chvíli ukážeme. 
+Jak jde vidět, ve sledované historii dochází v průměru pouze k inflaci. Deflaci tento sledovaný úsek na úrovni zprůměrovaných hodnot nezná. Navíc je dobré si uvědomit, že při uvažování o inflaci v procentech na meziročních průměrech je nutné do výpočtu zanést složený úrok. Jinými slovy nelze pouze procenta sečítat, pokud chceme vědět mezi více než dvěma roky výslednou inflaci. To se může zdát jako zanedbatelná věc, ale opak je pravdou. Složený úrok je poměrně mocný, jak si za chvíli ukážeme. 
 
 ### Spustěte rotačky
-V historii samostatného Československa, za naší první vlády, kdy měnovou politiku řídil Alois Rašín, docházelo kdeflaci a to zcela řízeně. Před počátkem dvacatého století dokonce byla deflace zcela normálním jevem. V dnešní době však převládá názor, že deflace je škodlivá a inflace je ok nebo dokonce něco, co je správné. Centrální banky vyspělého světa řízeně udržují inflaci a protože doba, kdyz všechny vytištěné peníze museli být kryty zlatem, jsou nenávratně pryč, nic centrálním bankám nebrání spustit rotačky a teoreticky si natisknout peněz, kolik je potřeba.
+V historii samostatného Československa, za naší první vlády, kdy měnovou politiku řídil Alois Rašín, docházelo k deflaci a to zcela řízeně. Před počátkem dvacatého století dokonce byla deflace zcela normálním jevem. V dnešní době však převládá názor, že deflace je škodlivá a inflace je ok nebo dokonce něco, co je správné. Centrální banky vyspělého světa řízeně udržují inflaci a protože doba, kdy všechny vytištěné peníze museli být kryty zlatem, jsou nenávratně pryč, nic centrálním bankám nebrání spustit rotačky a teoreticky si natisknout peněz, kolik je potřeba.
 I ČNB má inflační [cíl nastavený na 2%)](https://www.cnb.cz/cs/menova-politika/cilovani/) 
 
 Inflaci vydatně napomáhá také fiskální politika většiny vlád, včteně té naši. Půjčování peněz, kde se dá, a jejich (většinou neefektivní) pumpování do ekonomiky opět pomáhá inflaci růst.
 
 Jen pro zajímvaost, některé země jako je Švýcarsko (od roku 2002) má zakotveno v ústavě, že není možné hospodařit s deficitem. Toto si pěkně prosím odhlasovali Švýcaři sami v referendu. Pro nás je to představa jak z jiného světa.
 
-## Budoucnost
+### Budoucnost
 Pokud budeme vycházet z historie posledních několika desetiletí a plánů centrálních bank, tak se jeví jako pravděpodobné, že inflace tu s námi bude i nadále. Co to pro nás znamená? 
 
 - životní náklady se budou neustále zvětšovat
@@ -103,34 +105,21 @@ Pokud budeme například uvažovat o spoření na důchod, nemůžeme rozhodně 
 
 10 000 x 12 x 30 = 3 600 000 Kč
 
-Došel by k závěru, že mu bude stačit 3,6 milionu. Asi by našeho naivního pana Nováka šokovalo, když by v půlce důchodu zjistil, že měsíčně potřebuje ne 10 000 Kč na měsíc, ale 13 500 Kč. Po 30 letech dokonce 18 000 Kč. Zde je graf vývoje:
+Došel by k závěru, že mu bude stačit 3,6 milionu. Asi by našeho pana Nováka šokovalo, když by v půlce důchodu zjistil, že měsíčně potřebuje ne 10 000 Kč na měsíc, ale 13 500 Kč. Po 30 letech dokonce 18 000 Kč. Zde je graf vývoje:
 
 ![Simulace inflace](./assets/inflace-simulace.jpg)
 
-Tento obrázek je z [Kalkulačny simulace inflace](https://osobni-finance.netlify.app/financni-kalkulacky). Můžete si sami vyzkoušet kolik peněz budete potřebovat v budoucnu. 
+Tento obrázek je z [Kalkulačny simulace inflace](https://osobni-finance.netlify.app/financni-kalkulacky). Můžete si sami vyzkoušet kolik peněz budete potřebovat v budoucnu, když zafunguje inflace. 
 
 ## Jak se vypořádat s inflací
-Všechny odstavce výše měli za cíl Vám ukázat, že nejkonzervativnější volba úschovy peněz není nejmoudřejší. Pokud dáme peníze do banky na běžný účet (v dnešní době i terminovaný, kde je úročení také směšné), dobrovolně nás necháme zloděje jménem inflace neustále okrádat o naše těžce vydělané a mnohdy se zkřípěním zůbů uspořené peníze. Obecně máme více možností jak se s touto situací vypořádat:
+Všechny odstavce výše měli za cíl Vám ukázat, že nejkonzervativnější volba úschovy peněz není nejmoudřejší. Pokud dáme peníze do banky na běžný účet (v dnešní době i terminovaný, kde je úročení také směšné), dobrovolně nás necháme zloděje jménem inflace neustále okrádat o naše těžce vydělané a mnohdy se skřípěním zůbů uspořené peníze. Obecně máme více možností jak se s touto situací vypořádat:
 
-- nechat se okrádat 
+- stčit hlavu do písku a nechat se okrádat
 - vystoupit z ekonomiky a stát se zcela soběstačný (to je ale jen pro otrlé)
-- vše hned utratit a nespořit
+- vše hned utratit a nespořit (tohle prosím nedělejte)
 - snažit se porazit inflaci
 
 Ti z nás, kdo by se rádi pokusili o poslední přístup - poražení inflace - budou muset ve finále nechat své peníze nějakým způsobem vydělávat a to aspoň do té míry, aby to co vydělají, pokrylo to co nám inflace ukrojí. Peníze budou investovat pomocí některých investičních nástrojů. Výši rizika, likvidity a potencionálních výnosů si většinou každý musí určit sám, dle své povahy, finančních možností, odolnosti vůči stresu atd. 
 
 Jakou cestu volím já, jsem již nastínil v prvním článku této série - pomocí dlouhodobé, pravidelné investice do široce diverzifikovaného indexového fondu obchodovaného za minimální poplatky. Pokud chcete jít stejnou cestou, bude pro Vás určen jeden z dalších článků v této sérii. Než se k tomu ale dostaneme, musíme si udělat jasno v našich cílech. Pro dosažení tohoto cíle si musíme vypracovat plán. A o tom bude právě hned další článek.
-
-
-Zde jsou některé zajimavé linky, již zmíněné v textu výše:
-
-https://www.czso.cz/csu/czso/mira_inflace
-
-https://www.czso.cz/csu/czso/inflace_spotrebitelske_ceny
-
-https://www.czso.cz/documents/10180/26822363/manual_isc_2021.pdf/06963cd6-53d0-4b9b-9f7e-b7465060ff71?version=1.1
-
-https://www.czso.cz/documents/10180/23195394/spot_kos2021.pdf/ab69ea54-c76a-4733-bc61-4aae9a7541b6?version=1.1
-
-https://www.czso.cz/documents/10180/92010922/3202031901_cen.pdf/1242aa1a-46a0-46c5-b578-7f377a085142?version=1.3
 

@@ -12,8 +12,8 @@
                 <!-- <a class="header-item" routerLink="/about">O stránce</a> -->
             </div>
         </div>
-        <div class="main-title">
-            <h1 class="pl-6 pr-6 break-words">{{ (currentPage$ | async)?.title || getTitleByRoute(currentPage$ | async) || 'Osobní finance krok za krokem' }}</h1>
+        <div class="text-center  pt-32">
+            <h1 class="pl-6 pr-6 break-words text-4xl font-bold text-white sm:text-6xl lg:text-7xl xl:text-8xl">{{ (currentPage$ | async)?.title || getTitleByRoute(currentPage$ | async) || 'Osobní finance krok za krokem' }}</h1>
         </div>
     </div>
 
@@ -25,6 +25,6 @@
 
 
 <footer class='w-full text-center border-t border-grey p-4 pin-b bg-black text-white'>
-    © 2021 Osobní Finance
+    <span>© 2021 Osobní Finance</span> &nbsp;&nbsp;&nbsp; Kontakt: <a href="mailto:osfin@seznam.cz">osfin@seznam.cz</a>
 </footer>
 
