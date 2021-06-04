@@ -9,6 +9,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  public showingMore: boolean;
 
   // links$: Observable<ScullyRoute[]> = this.scully.available$.pipe(
   //   map(links => links.filter(l => l.isBlog)),
@@ -22,6 +24,10 @@ export class HomeComponent implements OnInit {
     // this.links$.subscribe((links) => {
     //   console.log('X', links);
     // });
+  }
+
+  toggleShowMore() {
+    this.showingMore = true;
   }
 
   // getThumbnailImgUrl(path) {

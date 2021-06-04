@@ -13,51 +13,65 @@
       návodu, jak
       si udělat pořádek ve financích, zlepšit svoji finanční situaci a nabýt lepší finanční gramotnosti.
     </p>
-    <p>
-      Motivací je moje přesvědčení, že znalost
-      problematiky starání se o vlastní finanční prostředky, je v ČR špatná. Tohoto faktu pak zneužívají různé instituce
-      od státu počínaje (inflace, nesmyslně dotované produkty pro spoření), přes banky (poplatky fondů), až po notoricky
-      známé „finanční poradce” (zde radši v tuto chvíli pomlčím).
-    </p>
-    <p>
-      Tato série je určena lidem, kteří chtějí zlepšit stav svých financí, ale neví jak. Rozhodně se nejedná o návod na
-      zbohatnutí. Spíše se zaměříme na zlepšení šance něco uspořit a udržení hodnoty toho, co naspoříme.
-    </p>
 
-    <blockquote>
-      "Jestliže si z této série článku odnesete jednu jedinou věc, byl bych rád, kdyby to bylo Vaše osobní přesvědčení,
-      že
-      o své finance je potřeba se starat, a že nikdo to neudělá tak dobře jako Vy.""
-    </blockquote>
+    <div *ngIf="showingMore">
+      <p>
+        Motivací je moje přesvědčení, že znalost
+        problematiky starání se o vlastní finanční prostředky, je v ČR špatná. Tohoto faktu pak zneužívají různé
+        instituce
+        od státu počínaje (inflace, nesmyslně dotované produkty pro spoření), přes banky (poplatky fondů), až po
+        notoricky
+        známé „finanční poradce” (zde radši v tuto chvíli pomlčím).
+      </p>
+      <p>
+        Tato série je určena lidem, kteří chtějí zlepšit stav svých financí, ale neví jak. Rozhodně se nejedná o návod
+        na
+        zbohatnutí. Spíše se zaměříme na zlepšení šance něco uspořit a udržení hodnoty toho, co naspoříme.
+      </p>
 
-    <p>
-      Není k tomu potřeba doopravdy
-      mnoho - nejtěžší ze všeho je prostě začít. Můžete samozřejmě využít služeb některého z poradců, ale v tu chvíli je
-      potřeba brát zřetel na několik základních pravidel, jak vybrat toho správného - i tomu je věnován článek. 
-      Nicméně hlavní podstatou obsahu tohoto webu bude vytvoření postupného návodu, jak se začít o své finance starat sám.
-    </p>
+      <blockquote>
+        "Jestliže si z této série článku odnesete jednu jedinou věc, byl bych rád, kdyby to bylo Vaše osobní
+        přesvědčení,
+        že
+        o své finance je potřeba se starat, a že nikdo to neudělá tak dobře jako Vy.""
+      </blockquote>
+
+      <p>
+        Není k tomu potřeba doopravdy
+        mnoho - nejtěžší ze všeho je prostě začít. Můžete samozřejmě využít služeb některého z poradců, ale v tu chvíli
+        je
+        potřeba brát zřetel na několik základních pravidel, jak vybrat toho správného - i tomu je věnován článek.
+        Nicméně hlavní podstatou obsahu tohoto webu bude vytvoření postupného návodu, jak se začít o své finance starat
+        sám.
+      </p>
 
 
-    <!-- <p>
+      <!-- <p>
       V každém článku se pokusím dále odkázat na zajímavé materiály, které Vám umožní jít ještě dále a informace mnou
       zmíněné si rozšířit či lépe ověřit.
     </p> -->
-    <p>
-      Ze své podstaty jsem hodně spořivý člověk a jak by dosvědčila moje manželka, někdy až moc. I proto doporučené
-      postupy budou (alespoň podle mého nejlepšího vědomí a svědomí) pokud možno bez placených služeb. 
-    </p>
+      <p>
+        Ze své podstaty jsem hodně spořivý člověk a jak by dosvědčila moje manželka, někdy až moc. I proto doporučené
+        postupy budou (alespoň podle mého nejlepšího vědomí a svědomí) pokud možno bez placených služeb.
+      </p>
 
-    <blockquote>
-      "Na rovinu přiznávám, že nemám žádné formální ekonomické vzdělání, vše co zde budu psát vychází z mého
-      přesvědčení,
-      knih které jsem přečetl a z mých zkušeností. Nemám jakékoliv spojení s žádným z doporučovaných, či pro
-      účely demonstrace použitých, produktů a služeb. Neživím se finančním poradenstvím."
-    </blockquote>
+      <blockquote>
+        "Na rovinu přiznávám, že nemám žádné formální ekonomické vzdělání, vše co zde budu psát vychází z mého
+        přesvědčení,
+        knih které jsem přečetl a z mých zkušeností. Nemám jakékoliv spojení s žádným z doporučovaných, či pro
+        účely demonstrace použitých, produktů a služeb. Neživím se finančním poradenstvím."
+      </blockquote>
+      <p>
+        Budu rád pokud mě v komentářích upozorníte na jakékoliv chyby či nesrovnalosti. S češtinou jsem vždy bojoval,
+        takže příležitosti na upozornění na gramatické chyby určitě budou.
+      </p>      
+    </div>
+    <a (click)="toggleShowMore()" class="cursor-pointer text-base relative text:xs -top-4 lg:-top-8 md:-top-6 sm:-top-6 ">{{showingMore ? '' : 'Více k úvodu...'}}</a>
+
     <p>
-      Budu rád pokud mě v komentářích upozorníte na jakékoliv chyby či nesrovnalosti. S češtinou jsem vždy bojoval, 
-      takže příležitosti na upozornění na gramatické chyby určitě budou.
+      Pokud Vás zajímají i jiné články, než samotný navod, mrkněte na <a routerLink="list" >seznam všech článků</a>.
     </p>
-    <p>
+    
 
   </article>
 
