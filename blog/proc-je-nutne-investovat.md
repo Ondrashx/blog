@@ -109,7 +109,7 @@ Došel by k závěru, že mu bude stačit 3,6 milionu. Asi by našeho pana Nová
 
 ![Simulace inflace](./assets/inflace-simulace.jpg)
 
-Tento obrázek je z [Kalkulačny simulace inflace](https://osobni-finance.netlify.app/financni-kalkulacky). Můžete si sami vyzkoušet kolik peněz budete potřebovat v budoucnu, když zafunguje inflace. 
+Tento obrázek je z [Kalkulačny simulace inflace](https://osobni-finance.eu/financni-kalkulacky). Můžete si sami vyzkoušet kolik peněz budete potřebovat v budoucnu, když zafunguje inflace. 
 
 ## Jak se vypořádat s inflací
 Všechny odstavce výše měli za cíl Vám ukázat, že nejkonzervativnější volba úschovy peněz není nejmoudřejší. Pokud dáme peníze do banky na běžný účet (v dnešní době i terminovaný, kde je úročení také směšné), dobrovolně nás necháme zloděje jménem inflace neustále okrádat o naše těžce vydělané a mnohdy se skřípěním zůbů uspořené peníze. Obecně máme více možností jak se s touto situací vypořádat:

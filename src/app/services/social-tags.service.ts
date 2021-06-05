@@ -9,7 +9,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class SocialTagsService {
 
-  urlPrefix = 'https://osobni-finance.netlify.app/blog';
+  urlPrefix = 'https://osobni-finance.eu/blog';
   titlePrefix = 'Osobní finance - ';
   descriptionDefault = 'Osobni finance. Návod krok za krokem jak si zlepšit finanční situaci. ETF, dluhopisy, spoření stavební a důchodoé atd. v kontextu osobních financí.';
   keyWordsDefault = 'osobní finance, ETF, dluhopisy, pojištění, stavební spoření, finanční poradce, finanční poradenství, zdarma';
