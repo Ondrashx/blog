@@ -5,13 +5,13 @@
             <div class="flex justify-between">
                 <mat-form-field [style.width.px]=150>
                     <mat-label>Počáteční částka investice</mat-label>
-                    <input matInput type="number"  [(ngModel)]="investValue" (blur)="onValueChange()">
+                    <input matInput type="number" [(ngModel)]="investValue" (blur)="onValueChange()">
                     <span matSuffix>Kč</span>
                 </mat-form-field>
 
                 <mat-form-field [style.width.px]=150>
                     <mat-label>Měsíční částka investice</mat-label>
-                    <input matInput type="number"  [(ngModel)]="investMonthlyValue" (blur)="onValueChange()">
+                    <input matInput type="number" [(ngModel)]="investMonthlyValue" (blur)="onValueChange()">
                     <span matSuffix>Kč</span>
                 </mat-form-field>
             </div>
@@ -69,18 +69,18 @@
                 <span class="label-container leading-10">
                     <label>Zobrazit graf: </label>
                 </span>
-                <div class="w-44">     
+                <div class="w-44">
                     <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showCharts ? 'Ano' : 'Ne'}}</label>
-                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showCharts"></mat-slide-toggle>
+                    <mat-slide-toggle class="relative top-2" [(ngModel)]="showCharts"></mat-slide-toggle>
                 </div>
             </div>
             <div class="flex justify-between">
                 <span class="label-container leading-10">
                     <label>Zobrazit tabulku: </label>
                 </span>
-                <div class="w-44">     
+                <div class="w-44">
                     <label class="font-bold text-lg ml-3 mr-2 relative top-2">{{showTables ? 'Ano' : 'Ne'}}</label>
-                    <mat-slide-toggle  class="relative top-2" [(ngModel)]="showTables"></mat-slide-toggle>
+                    <mat-slide-toggle class="relative top-2" [(ngModel)]="showTables"></mat-slide-toggle>
                 </div>
             </div>
         </div>
@@ -93,18 +93,21 @@
 
         <table class="leading-10">
             <tr>
-                <td >Celkem naspořeno:</td>
+                <td>Celkem naspořeno:</td>
                 <td class="text-xl font-bold text-right">
-                    <button mat-icon-button class="relative -top-1" [cdkCopyToClipboard]="basicInvestInfo.lastValue.toFixed(2)"><mat-icon>content_copy</mat-icon></button>
+                    <button mat-icon-button class="relative -top-1"
+                        [cdkCopyToClipboard]="basicInvestInfo.lastValue.toFixed(2)">
+                        <mat-icon>content_copy</mat-icon>
+                    </button>
                     <span>{{basicInvestInfo.lastValue | number:'1.2-2'}} Kč</span>
                 </td>
             </tr>
             <tr class="italic">
-                <td >Včetně úroků:</td>
+                <td>Včetně úroků:</td>
                 <td class="text-xl text-right">({{basicInvestInfo.lastInterest | number:'1.2-2'}} Kč)</td>
             </tr>
             <tr>
-                <td >Reálně naspořeno:</td>
+                <td>Reálně naspořeno:</td>
                 <td class="text-xl font-bold text-right">{{realInvestInfo.lastValue |
                     number:'1.2-2'}} Kč</td>
             </tr>
@@ -112,9 +115,13 @@
     </div>
 </div>
 
+<div style="display: block;">
+    <canvas baseChart [datasets]="chartData.data" [labels]="chartData.labels" [options]="chartOptions" [legend]="true"
+        type="line">
+    </canvas>
+</div>
 
-
-<p-chart *ngIf="showCharts" type="line" [data]="chartData" [options]="chartOptions"></p-chart>
+<!-- <p-chart *ngIf="showCharts" type="line" [data]="chartData" [options]="chartOptions"></p-chart> -->
 
 <div *ngIf="showTables" class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto mt-16 mb-16">
     <table>

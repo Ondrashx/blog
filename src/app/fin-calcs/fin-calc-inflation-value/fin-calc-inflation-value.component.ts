@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChartOptions } from 'chart.js';
 import { InvestInfo, FinCalcService } from '../fin-calc.service';
 
 @Component({
@@ -47,24 +48,12 @@ export class FinCalcInflationValueComponent implements OnInit {
   public inflationValue = 2;
 
   
-  public basicOptions = {
-    legend: {
-      labels: {
-        fontColor: '#495057'
-      }
+  public chartOptions: ChartOptions = {
+    responsive: true,
+    interaction: {
+      intersect: false,
+      mode: 'index',     
     },
-    scales: {
-      xAxes: [{
-        ticks: {
-          fontColor: '#495057'
-        }
-      }],
-      yAxes: [{
-        ticks: {
-          fontColor: '#495057'
-        }
-      }]
-    }
   };
 
   public compoundBasicInfo: InvestInfo;
@@ -103,7 +92,7 @@ export class FinCalcInflationValueComponent implements OnInit {
 
     this.chartData = {
       labels: years.map(y => this.finCalcService.formatYearLabel(y)),
-      datasets: [
+      data: [
         {
           label: 'Částka po inflaci',
           data: this.rows.map(v => v.value.toFixed(2)),

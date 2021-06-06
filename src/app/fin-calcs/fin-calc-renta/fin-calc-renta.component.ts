@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ChartOptions, Color } from 'chart.js';
 import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
+//import { ChartDataSet, ChartOptions } from 'chart.js';
 
 @Component({
   selector: 'app-fin-calc-renta',
@@ -7,7 +9,8 @@ import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
   styleUrls: ['./fin-calc-renta.component.scss']
 })
 export class FinCalcRentaComponent implements OnInit {
-  
+
+ 
 
   @Input() public showCharts: false;
   @Input() public showTables: false;
@@ -49,46 +52,38 @@ export class FinCalcRentaComponent implements OnInit {
 
 
 
-  basicOptions = {
-    tooltips: {
-      mode: 'x'
-    },
-    legend: {
-      labels: {
-        fontColor: '#495057'
-      }
+  public chartOptions: ChartOptions = {
+    responsive: true,
+    interaction: {
+      intersect: false,
+      mode: 'index',     
     },
     scales: {
-      xAxes: [{
-        ticks: {
-          fontColor: '#495057'
-        }
-      }],
-      yAxes: [{
-        id: 'A',
-        ticks: {
-          fontColor: '#495057'
-        },
+      y: {
+        type: 'linear',
+        display: 'auto',
         position: 'left',
-        display: 'auto',
-
-        scaleLabel: {
-          display: true,
-          labelString: 'Zbývající úspory v Kč'
+        title: {
+          text: 'Zbývající úspory v Kč',
+          display: true
         }
-
-      }, {
-        id: 'B',
-        ticks: {
-          fontColor: '#495057'
-        },
+        
+      },
+      y1: {
+        type: 'linear',
+        display: 'auto',
         position: 'right',
-        display: 'auto',
-        scaleLabel: {
-          display: true,
-          labelString: 'Získ z úroku / Měsíční náklady v Kč'
+
+        // grid line settings
+        grid: {
+          drawOnChartArea: false, // only want the grid lines for one axis to show up
+        },
+
+        title: {
+          text: 'Získ z úroku / Měsíční náklady v Kč',
+          display: true
         }
-      }]
+      },
     }
   };
 
@@ -124,11 +119,11 @@ export class FinCalcRentaComponent implements OnInit {
 
     this.chartData = {
       labels: years.map(y => this.finCalcService.formatYearLabel(y)),
-      datasets: [
+      data: [
         {
           label: 'Zbývající úspory',
           data: Array.from(this.calcInfo.values.values()).map(v => v.remainingMoney.toFixed(2)),
-          yAxisID: 'A',
+          yAxisID: 'y',
           fill: true,
           borderColor: '#42A5F5'
         },
@@ -136,14 +131,14 @@ export class FinCalcRentaComponent implements OnInit {
           label: 'Měsiční náklady po inflaci',
           data: Array.from(this.calcInfo.values.values()).map(v => v.monthlyNeededValue.toFixed(2)),
           fill: true,
-          yAxisID: 'B',
+          yAxisID: 'y1',
           borderColor: '#FFA726'
         },
         {
           label: 'Zisk z úroků z úspor',
           data: Array.from(this.calcInfo.values.values()).map(v => v.gainFromInterest == null ? null : (v.gainFromInterest/12).toFixed(2)),
           fill: true,
-          yAxisID: 'B',
+          yAxisID: 'y1',
           borderColor: 'green'
         }
       ]

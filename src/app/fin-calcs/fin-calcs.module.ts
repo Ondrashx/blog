@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ChartModule} from 'primeng/chart';
+import { ChartsModule } from 'ng2-charts';
 import {MatInputModule} from '@angular/material/input'
 import {MatSliderModule} from '@angular/material/slider'
 import {MatExpansionModule} from '@angular/material/expansion'
@@ -25,7 +25,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   imports: [
     CommonModule,
     FinCalcsRoutingModule,
-    ChartModule,
+    ChartsModule,
     MatInputModule,
     MatFormFieldModule,
     MatSliderModule,

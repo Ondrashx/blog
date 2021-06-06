@@ -34,13 +34,12 @@
     "@scullyio/init": "^1.1.1",
     "@scullyio/ng-lib": "^1.0.0",
     "@scullyio/scully": "^1.0.0",
-    "chart.js": "^2.9.4",
+    "chart.js": "^3.3.2",
     "markdown-it-mark": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",
+    "ng2-charts": "^3.0.0-rc.2",
     "ngx-sharebuttons": "^8.0.5",
     "normalize.css": "^8.0.1",
-    "primeicons": "^4.1.0",
-    "primeng": "^11.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -74,6 +73,7 @@
     "trash-cli": "^4.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "typescript": "~4.1.2",
+    "webpack-bundle-analyzer": "^4.4.2"
   }
 }
