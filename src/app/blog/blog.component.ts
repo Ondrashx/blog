@@ -20,6 +20,6 @@ export class BlogComponent implements OnInit {
   ngOnInit() {}
 
   constructor(private router: Router, private route: ActivatedRoute, private scully: ScullyRoutesService,) {
-    setTimeout((window as any).lazyload, 250);
+    setTimeout((window as any).lazyload, 750);
   }
 }

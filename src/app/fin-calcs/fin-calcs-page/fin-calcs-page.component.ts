@@ -10,8 +10,8 @@ export class FinCalcsPageComponent implements OnInit {
 
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
-  public showCharts = true;
-  public showTables = true;
+  public showCharts = false;
+  public showTables = false;
   public neededRent = 20000;
   public startNestEgg = 10000000;
   public expandFirst = false;

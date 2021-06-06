@@ -83,7 +83,7 @@
 </div>
 
 
-<div style="display: block;">
+<div style="display: block;" *ngIf="showCharts">
     <canvas baseChart [datasets]="chartData.data" [labels]="chartData.labels" [options]="chartOptions" [legend]="true"
         type="line">
     </canvas>
