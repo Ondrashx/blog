@@ -7,6 +7,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { FinCalcsModule } from './fin-calcs/fin-calcs.module';
+import { LazyLoadImgDirective } from './directives/lazy-load-img.directive';
 // import locale from '@angular/common/locales/cs';
 // import { registerLocaleData } from '@angular/common';
 // registerLocaleData(locale);
@@ -14,7 +15,8 @@ import { FinCalcsModule } from './fin-calcs/fin-calcs.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LazyLoadImgDirective
   ],
   imports: [
     BrowserModule,
