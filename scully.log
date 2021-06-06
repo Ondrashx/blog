@@ -608,3 +608,14 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
 
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file .\blog\test.md.temp has extension .temp that has no plugin defined, scully will skip this file.
+

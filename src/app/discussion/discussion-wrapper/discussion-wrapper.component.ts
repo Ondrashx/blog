@@ -41,7 +41,7 @@ export class DiscussionWrapperComponent implements OnInit {
 
   create_remarkbox_iframe() {
 
-    var rb_owner_key = "4777168b-89b1-11eb-9666-040140774501";
+    var rb_owner_key = "06263375-c6b9-11eb-a7d6-040140774501";
     var thread_uri = window.location.href;
     var thread_title = window.document.title;
     var thread_fragment = window.location.hash;
