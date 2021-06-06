@@ -12,7 +12,7 @@
     "scully:serve": "npx scully serve --",
     "scully:watch": "npx scully --watch",
     "skul": "npx ng build && npx scully --scanRoutes && npx scully --watch",
-    "netlify:build": "npm run build:prod && npx trash static-ready && npx scully --scanRoutes && npx scully --",
+    "n:b": "npm run build:prod && npx trash static-ready && npx scully --scanRoutes && npx scully --",
     "build:prod": "cross-env NODE_ENV=production ng build --prod"
   },
   "private": true,
