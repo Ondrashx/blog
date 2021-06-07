@@ -1,6 +1,6 @@
 <div class="wrapper pt-11">
     <article *ngFor="let page of (links$ | async)">
-      <a [routerLink]="page.route" >
+      <a [routerLink]="page.route + '/'" >
         <mat-card class="shadow-lg transition-all hover:bg-gray-100 clickable ">
           <mat-card-header   class="py-5">
             <div mat-card-avatar class="header-image" [style.background-image]="getThumbnailImgUrl(page.imgSmall)"></div>
