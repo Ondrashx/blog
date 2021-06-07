@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
-import { throwError } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
 @Injectable({
@@ -15,16 +14,16 @@ export class SocialTagsService {
 
   pageInfos:{[key: string]: {description: string, keyWords: string}} = {
     'Krok za krokem': {
-      description: 'Osobni finance. Návod krok za krokem jak si zlepšit finanční situaci. ETF, dluhopisy, spoření stavební a důchodoé atd. v kontextu osobních financí.',
-      keyWords: 'osobní finance, ETF, dluhopisy, pojištění, stavební spoření, finanční poradce, finanční poradenství, zdarma'
+      description: 'Osobní finance a investice. Návod krok za krokem jak si zlepšit finanční situaci. Jak investovat. Jak si udělat pořádek ve financích a udržet si ho.',
+      keyWords: 'osobní finance, ETF, dluhopisy, pojištění, spoření, finanční poradce, finanční poradenství, zdarma'
     },
     'Seznam článků': {
-      description: 'Osobni finance. Seznam všech článků na tomto blogu. Články o investicích, šetření, inflaci a financích obecně.',
+      description: 'Osobni finance a investice. Seznam všech článků na tomto blogu. Články o investicích, šetření, inflaci a financích obecně.',
       keyWords: 'osobní finance, investice, šetření, inflace, ETF, články'
 
     },
     'Finanční kalkulačky': {
-      description: 'Osobni finance. Kalkulačky a simulace pro investice a osobní finance. Kalkulačka infalce, vývoje investice, čerpání renty atd.',
+      description: 'Osobni finance a investice. Kalkulačky a simulace pro investice a osobní finance. Kalkulačka inflace, vývoje investice, čerpání renty atd.',
       keyWords: 'osobní finance, finanční kalkulačky, renta, investice, inflace'
 
     }
