@@ -13,7 +13,7 @@ import { SocialTagsService } from './services/social-tags.service';
 export class AppComponent {
   title = 'Osobní finance krok za krokem 2';
 
-  currentPage$: Observable<ScullyRoute> = this.scully.getCurrent().pipe(tap((data) => console.log('XX', data))); //available$;
+  currentPage$: Observable<ScullyRoute> = this.scully.getCurrent().pipe(/*tap((data) => console.log('XX', data))*/); //available$;
 
   constructor(private scully: ScullyRoutesService, private socialTagsService: SocialTagsService) {
     this.socialTagsService.setTitleAndTags();

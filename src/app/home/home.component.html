@@ -1,6 +1,6 @@
 <div class="text-center py-3">
-  <share-buttons [theme]="'circles-dark'" [include]="['facebook','twitter','linkedin']"
-    [show]="3" [size]="1"></share-buttons>
+  <share-buttons [theme]="'circles-dark'" [include]="['facebook','twitter','linkedin']" [show]="3" [size]="1">
+  </share-buttons>
 </div>
 <div class="px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl">
 
@@ -14,7 +14,7 @@
       si udělat pořádek ve financích, zlepšit svoji finanční situaci a nabýt lepší finanční gramotnosti.
     </p>
 
-    <div *ngIf="showingMore">
+    <div id="more-introduction" style="display:none">
       <p>
         Motivací je moje přesvědčení, že znalost
         problematiky starání se o vlastní finanční prostředky, je v ČR špatná. Tohoto faktu pak zneužívají různé
@@ -64,14 +64,17 @@
       <p>
         Budu rád pokud mě v komentářích upozorníte na jakékoliv chyby či nesrovnalosti. S češtinou jsem vždy bojoval,
         takže příležitosti na upozornění na gramatické chyby určitě budou.
-      </p>      
+      </p>
     </div>
-    <a (click)="toggleShowMore()" class="cursor-pointer text-base relative text:xs -top-4 lg:-top-8 md:-top-6 sm:-top-6 ">{{showingMore ? '' : 'Více k úvodu...'}}</a>
+    <a id="btn-more-intro"
+      onclick="document.getElementById('more-introduction').style.display=''; document.getElementById('btn-more-intro').style.display='none'"
+      class="cursor-pointer text-base relative text:xs -top-4 lg:-top-8 md:-top-6 sm:-top-6 ">{{showingMore ? '' : 'Více
+      k úvodu...'}}</a> 
 
     <p>
-      Pokud Vás zajímají i jiné články, než samotný navod, mrkněte na <a routerLink="list" >seznam všech článků</a>.
+      Pokud Vás zajímají i jiné články, než samotný navod, mrkněte na <a routerLink="list">seznam všech článků</a>.
     </p>
-    
+
 
   </article>
 
