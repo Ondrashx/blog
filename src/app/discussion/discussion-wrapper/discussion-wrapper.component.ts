@@ -42,11 +42,9 @@ export class DiscussionWrapperComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event) {
-    console.log('event', event);
-    
+   
     if (!this.inited) {
       let scrollTop = window.pageYOffset || ((document.documentElement || document.body.parentNode || document.body) as any).scrollTop;
-      console.log('scrollTop', scrollTop);
       if (scrollTop > 300) {
         this.init();
         this.inited = true;

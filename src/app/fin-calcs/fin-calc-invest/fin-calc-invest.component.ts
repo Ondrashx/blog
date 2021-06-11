@@ -40,7 +40,7 @@ export class FinCalcInvestComponent implements OnInit {
 
 
   onValueChange(valueType: 'inflation' | 'year' | 'other' = 'other') {
-    console.log('change');
+    // console.log('change');
     if (valueType === 'inflation') this.inflationValueChanged.emit(this.inflationValue);
     if (valueType === 'year') this.yearValueChanged.emit(this.yearValue);
 
