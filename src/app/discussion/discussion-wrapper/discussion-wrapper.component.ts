@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 
@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class DiscussionWrapperComponent implements OnInit {
 
+  inited = false;
+
   currentPage$: Observable<ScullyRoute> = this.scully.getCurrent(); //available$;
 
   constructor(private scully: ScullyRoutesService) { }
@@ -16,7 +18,11 @@ export class DiscussionWrapperComponent implements OnInit {
 
   ngOnInit() {
     // debug current pages
-    this.currentPage$.subscribe((links) => {
+
+  }
+
+  init() {
+        this.currentPage$.subscribe((links) => {
       console.log(links);
       // subscribe to changed url and recreate whole iframe
       this.create_remarkbox_iframe();
@@ -31,6 +37,22 @@ export class DiscussionWrapperComponent implements OnInit {
         document.getElementById("remarkbox-iframe")
       );
     });
+  }
+
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event) {
+    console.log('event', event);
+    
+    if (!this.inited) {
+      let scrollTop = window.pageYOffset || ((document.documentElement || document.body.parentNode || document.body) as any).scrollTop;
+      console.log('scrollTop', scrollTop);
+      if (scrollTop > 300) {
+        this.init();
+        this.inited = true;
+      }
+
+    }
   }
 
   removeChilds(parent) {
