@@ -105,7 +105,7 @@
 <!-- <p-chart *ngIf="showCharts" type="line" [data]="chartData" [options]="basicOptions"></p-chart> -->
 
 <div style="display: block;" *ngIf="showCharts">
-    <canvas baseChart [datasets]="chartData.data" [labels]="chartData.labels" [options]="chartOptions" [legend]="true"
+    <canvas baseChart [datasets]="chartData" [labels]="labels" [options]="chartOptions" [legend]="true"
         type="line">
     </canvas>
 </div>

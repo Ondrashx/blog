@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ChartOptions } from 'chart.js';
+import { BaseChartDirective } from 'ng2-charts';
 
 import { InvestInfo, FinCalcService } from '../fin-calc.service';
 
@@ -9,6 +10,8 @@ import { InvestInfo, FinCalcService } from '../fin-calc.service';
   styleUrls: ['./fin-calc-invest.component.scss']
 })
 export class FinCalcInvestComponent implements OnInit {
+
+  @ViewChild(BaseChartDirective) baseChartDirective: BaseChartDirective;
 
   @Input() public showCharts: false;
   @Input() public showTables: false;
@@ -50,6 +53,12 @@ export class FinCalcInvestComponent implements OnInit {
   }
 
   private recompute() {
+
+    if (this.baseChartDirective) {
+      (this.baseChartDirective.chart.config as any)._config.data.datasets = [];
+      (this.baseChartDirective.chart.config as any)._config.data.labels = [];
+    }
+
     const years = this.finCalcService.generateArrayOfNumbers(this.yearValue + 1);
 
     this.basicInvestInfo = this.finCalcService.calculateInvestInfo(this.investValue, this.investMonthlyValue,

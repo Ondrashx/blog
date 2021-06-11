@@ -1,5 +1,7 @@
+import { ViewChild } from '@angular/core';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ChartOptions } from 'chart.js';
+import { BaseChartDirective } from 'ng2-charts';
 import { InvestInfo, FinCalcService } from '../fin-calc.service';
 
 @Component({
@@ -8,6 +10,8 @@ import { InvestInfo, FinCalcService } from '../fin-calc.service';
   styleUrls: ['./fin-calc-inflation-value.component.scss']
 })
 export class FinCalcInflationValueComponent implements OnInit {
+
+  @ViewChild(BaseChartDirective) baseChartDirective: BaseChartDirective;
 
   private _yearValueInput: number;
   public get yearValueInput() : number {
@@ -80,6 +84,12 @@ export class FinCalcInflationValueComponent implements OnInit {
   }
 
   private recompute() {
+
+    if (this.baseChartDirective) {
+      (this.baseChartDirective.chart.config as any)._config.data.datasets = [];
+      (this.baseChartDirective.chart.config as any)._config.data.labels = [];
+    }
+
     const years = this.finCalcService.generateArrayOfNumbers(this.yearValue + 1);
 
     this.compoundBasicInfo = this.finCalcService.calculateInvestInfo(this.moneyValue, 0, this.inflationValue, years, 0);

@@ -60,7 +60,7 @@ window.onscroll = function () {
       (document.documentElement || document.body.parentNode || document.body)
         .scrollTop;
     if (scrollTop > 300) {
-      window.lazyload();
+      if (window.lazyload) window.lazyload();
       window.initDiscussion();
       initialized = true;
     }
