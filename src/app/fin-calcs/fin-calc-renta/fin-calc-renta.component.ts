@@ -152,7 +152,7 @@ export class FinCalcRentaComponent implements OnInit {
         borderColor: 'green'
       }
     ];
-    console.log('this.labels', this.labels);
+    //console.log('this.labels', this.labels);
 
     //}
   }

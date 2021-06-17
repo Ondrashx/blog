@@ -1,7 +1,10 @@
 <div class="app-center">
     <div class="py-3 flex justify-between px-6">
-        <span class="text-left align-middle top-4 relative text-xl">{{(currentPage$ |
-            async)?.publishedDate}}</span>
+        <div>
+            <div class="text-left align-middle top-4 relative text-xl">{{(currentPage$ | async)?.publishedDate}}</div>
+            <div class="text-left align-middle top-4 relative text-base  italic">Čas čtení: {{((currentPage$ |async)?.readingTime) | number: '1.0-0'}} minut</div>    
+        </div>
+
         <share-buttons [theme]="'circles-dark'" class="text-right"
             [include]="['facebook','twitter','linkedin']" [show]="3" [size]="1">
         </share-buttons>

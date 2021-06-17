@@ -1,7 +1,12 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 require('@notiz/scully-plugin-lazy-images');
 const {DisableAngular} = require('scully-plugin-disable-angular');
+const {timeToRead, timeToReadOptions} = require('scully-plugin-time-to-read');
 //import { getDelayAngularPlugin } from '@flowaccount/scully-plugin-angular-delay';
+
+setPluginConfig(timeToRead, {
+  path: '/blog/',
+} as timeToReadOptions);
 
 
 setPluginConfig(DisableAngular, 'postProcessByHtml', {
