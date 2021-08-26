@@ -12,7 +12,7 @@ slugs:
     - proc-je-nutne-investovat
 ---
 
-Vítejte v dalším díle série článků o osobních financích. Minule jsme si ukázali pár tipů, jak uspořit pár korun navíc. Co s penězi, které nám každý měsíc zbudou? Nějak je zaměstnáme. Ideálně tak, aby nám vznikla investice s nějakým co největším výnosem, nejmenším možným rizikem a rozumnou likviditou. 
+Vítejte v dalším díle série článků o osobních financích. Minule jsme si ukázali pár tipů, jak uspořit pár korun navíc. Co s penězi, které nám každý měsíc zbudou? Nějak je zaměstnáme. Ideálně tak, aby nám vznikla investice s co největším výnosem, nejmenším možným rizikem a rozumnou likviditou. 
 
 Bohužel tak jednoduché to není, mezi výši výnosu a výši rizika, existuje přímá úměra. Co to znamená v praxi je, že pokud chceme vyšší výnos, musíme postoupit vyšší riziko. Zároveň dokonce platí, že z druhé strany přímá uměra neplati nutně vždy - investiční nástroj s vyšší rizikovostí ještě automaticky neznamená nutně vyšší výnos. Tento článek je však zaměřen na něco jiného než na porovnání jednotlivých finančních instrumentů nebo dokonce jejich výběr a doporučení (to si necháme na následující články). Budeme se bavit o tom proč je vlastně dobré nebo dokonce nutné investovat.
 

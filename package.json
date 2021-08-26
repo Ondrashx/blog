@@ -11,8 +11,8 @@
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --",
     "s:w": "npx scully --watch",
-    "skul": "npx ng build && npx scully --scanRoutes && npx scully --watch",
-    "n:b": "npm run build:prod && npx trash static-ready && npx scully --scanRoutes && npx scully --",
+    "skul": "npx ng build  --prod --stats-json && npx scully --scanRoutes && npx scully --watch",
+    "n:b": "npm run build:prod && npx trash static-ready && npx scully --scanRoutes && npx scully --watch",
     "build:prod": "cross-env NODE_ENV=production ng build --prod --stats-json",
     "b": "npm run build:prod && npm run s:w"
   },
