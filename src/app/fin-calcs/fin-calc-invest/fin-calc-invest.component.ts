@@ -3,13 +3,14 @@ import { ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 
 import { InvestInfo, FinCalcService } from '../fin-calc.service';
+import { AbstractFinCalc } from '../fin-calcs-page/fin-calcs-ancestor';
 
 @Component({
   selector: 'app-fin-calc-invest',
   templateUrl: './fin-calc-invest.component.html',
   styleUrls: ['./fin-calc-invest.component.scss']
 })
-export class FinCalcInvestComponent implements OnInit {
+export class FinCalcInvestComponent extends AbstractFinCalc implements OnInit {
 
   @ViewChild(BaseChartDirective) baseChartDirective: BaseChartDirective;
 
@@ -40,6 +41,13 @@ export class FinCalcInvestComponent implements OnInit {
 
   public basicInvestInfo: InvestInfo;
   public realInvestInfo: InvestInfo;
+
+  ngOnInit(): void {
+    this.prefix = 'inv_';
+    this.enabledSetProps = ['yearValue', 'investValue', 'investMonthlyValue', 'interestValue', 'inflationValue', 'salaryInterestYearlyRaise'];
+    this.setParamsFromUrl();
+    this.recompute();
+  }
 
 
   onValueChange(valueType: 'inflation' | 'year' | 'other' = 'other') {
@@ -88,13 +96,11 @@ export class FinCalcInvestComponent implements OnInit {
 
   }
 
-  constructor(public finCalcService: FinCalcService) { }
+  constructor(finCalcService: FinCalcService) { super(finCalcService) }
 
 
 
-  ngOnInit(): void {
-    this.recompute();
-  }
+
 
   public getCalculatedInvestInfo() {
     return Array.from(this.basicInvestInfo.values.entries());

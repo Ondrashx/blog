@@ -6,6 +6,7 @@
 
 
   <div class="example-action-buttons pb-3">
+    <button mat-button (click)="shareCalcClick()" matTooltip="Po kliknutí bude do Vašeho cliboardu nakopírována adresa na tuto kalkulačku s vašimi údaji">Sdílet moji kalkulaci <mat-icon>content_copy</mat-icon></button>
     <button mat-button (click)="accordion.openAll()">Ukázat vše</button>
     <button mat-button (click)="accordion.closeAll()">Schovat vše</button>
     <mat-slide-toggle  class="ml-2" [(ngModel)]="showCharts">Zobrazit grafy</mat-slide-toggle>

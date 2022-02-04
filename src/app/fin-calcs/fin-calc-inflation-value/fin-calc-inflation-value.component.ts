@@ -3,13 +3,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { InvestInfo, FinCalcService } from '../fin-calc.service';
+import { AbstractFinCalc } from '../fin-calcs-page/fin-calcs-ancestor';
 
 @Component({
   selector: 'app-fin-calc-inflation-value',
   templateUrl: './fin-calc-inflation-value.component.html',
   styleUrls: ['./fin-calc-inflation-value.component.scss']
 })
-export class FinCalcInflationValueComponent implements OnInit {
+export class FinCalcInflationValueComponent extends AbstractFinCalc implements OnInit {
 
   @ViewChild(BaseChartDirective) baseChartDirective: BaseChartDirective;
 
@@ -38,7 +39,7 @@ export class FinCalcInflationValueComponent implements OnInit {
     this.recompute();
   }
   
-  public isConnected = false;
+  @Input() public isConnected = false;
 
   @Input() public showCharts: false;
   @Input() public showTables: false;
@@ -47,10 +48,9 @@ export class FinCalcInflationValueComponent implements OnInit {
 
   public chartData;
 
-  public yearValue = 20;
-  public moneyValue = 20000;
-  public inflationValue = 2;
-
+  @Input() public yearValue = 20;
+  @Input() public moneyValue = 20000;
+  @Input() public inflationValue = 2;
   
   public chartOptions: ChartOptions = {
     responsive: true,
@@ -61,11 +61,17 @@ export class FinCalcInflationValueComponent implements OnInit {
   };
 
   public compoundBasicInfo: InvestInfo;
-  public rows: {year: number, value: number, valueFromInterest: number}[]
+  public rows: {year: number, value: number, valueFromInterest: number}[];
+  
 
-  constructor(public finCalcService: FinCalcService) { }
+  constructor(finCalcService: FinCalcService) {
+    super(finCalcService)
+   }
 
   ngOnInit(): void {
+    this.prefix = 'inf_';
+    this.enabledSetProps = ['yearValue', 'moneyValue', 'inflationValue'];
+    this.setParamsFromUrl();
     this.recompute();
   }
 

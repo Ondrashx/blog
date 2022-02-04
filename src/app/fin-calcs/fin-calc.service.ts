@@ -11,6 +11,13 @@ export class FinCalcService {
     return [...Array(numbers).keys()];//.slice(1)
   }
 
+  public numFromPar = (p:URLSearchParams, prefix, name) => { const  v = p.get(prefix + name); if (v == null) return null; else return +v; };
+
+  public setParamFromUrl(component, prefix, name) {
+    const p = new URLSearchParams(window.location.href.split('?')[1]);
+    component[name] = this.numFromPar(p, prefix, name) ?? component[name];
+  }
+
   public calculateInvestInfo (startInvestment: number, monthlyInvestment: number, 
     interest: number, years: number[], interestRaiseSalary: number): InvestInfo {
     const result: InvestInfo = { // start year

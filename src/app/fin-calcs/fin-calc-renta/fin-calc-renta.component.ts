@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ChartOptions, Color } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
+import { AbstractFinCalc } from '../fin-calcs-page/fin-calcs-ancestor';
 //import { ChartDataSet, ChartOptions } from 'chart.js';
 
 @Component({
@@ -9,7 +10,7 @@ import { RentaCalcInfo, FinCalcService } from '../fin-calc.service';
   templateUrl: './fin-calc-renta.component.html',
   styleUrls: ['./fin-calc-renta.component.scss']
 })
-export class FinCalcRentaComponent implements OnInit {
+export class FinCalcRentaComponent extends AbstractFinCalc implements OnInit {
 
   @ViewChild(BaseChartDirective) baseChartDirective: BaseChartDirective;
 
@@ -46,16 +47,16 @@ export class FinCalcRentaComponent implements OnInit {
   }
 
   public isConnected = false;
-  public startNestEgg = 10000000;
-  public monthlyNeededRent = 20000;
+
   public chartData: any;
   public labels: string[];
 
+  public startNestEgg = 10000000;
+  public monthlyNeededRent = 20000;
   public inflationValue = 2;
   public interestValue = 4;
+
   public calcInfo: RentaCalcInfo;
-
-
 
   public chartOptions: ChartOptions = {
     responsive: true,
@@ -92,9 +93,12 @@ export class FinCalcRentaComponent implements OnInit {
     }
   };
 
-  constructor(public finCalcService: FinCalcService) { }
+  constructor(finCalcService: FinCalcService) { super(finCalcService) }
 
   ngOnInit(): void {
+    this.prefix = 'rn_';
+    this.enabledSetProps = ['startNestEgg', 'monthlyNeededRent', 'inflationValue', 'interestValue'];
+    this.setParamsFromUrl();
     this.recompute();
   }
 
