@@ -1,7 +1,10 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+//import { getTocPlugin, TocConfig } from 'scully-plugin-toc';
 require('@notiz/scully-plugin-lazy-images');
 const {DisableAngular} = require('scully-plugin-disable-angular');
 const {timeToRead, timeToReadOptions} = require('scully-plugin-time-to-read');
+import { getTocPlugin, TocConfig } from 'scully-plugin-toc';
+
 //import { getDelayAngularPlugin } from '@flowaccount/scully-plugin-angular-delay';
 
 setPluginConfig(timeToRead, {
@@ -18,6 +21,7 @@ setPluginConfig(DisableAngular, 'postProcessByHtml', {
 const postRenderers = [
   DisableAngular,
   'lazyImages',
+  'toc'
   // getDelayAngularPlugin({
   //   routesBlacklist: [
   //     { route: '/financni-kalkulacky', removeAngular: false },
@@ -26,6 +30,14 @@ const postRenderers = [
   //   delayMilliseconds: 1500
   // })
 ];
+
+const tocOptions: TocConfig = {
+  blogAreaSelector: '.blog-content',
+  insertSelector: '#toc',
+  level: ['h2', 'h3'],
+};
+const TocPlugin = getTocPlugin();
+setPluginConfig(TocPlugin, tocOptions);
 
 
 export const config: ScullyConfig = {

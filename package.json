@@ -73,6 +73,8 @@
     "postcss-scss": "^3.0.4",
     "protractor": "~7.0.0",
     "scully-plugin-disable-angular": "^8.0.0",
+    "scully-plugin-time-to-read": "0.0.5",
+    "scully-plugin-toc": "^3.0.0",
     "tailwindcss": "^2.0.3",
     "trash-cli": "^4.0.0",
     "ts-node": "~8.3.0",
